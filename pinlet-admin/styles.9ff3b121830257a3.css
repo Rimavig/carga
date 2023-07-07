@@ -40,4 +40,4 @@
  * @license
  * Copyright Akveo. All Rights Reserved.
  * Licensed under the MIT License. See License.txt in the project root for license information.
- */nb-layout-header.fixed{z-index:999!important}form legend{width:auto;font-size:1.125rem}form fieldset{border:1px solid var(--card-divider-color)}.cursor-pointer{cursor:pointer}.no-hover:hover{background-color:transparent}tr .ng2-smart-actions{height:auto}ng2-st-tbody-custom{display:flex}ng2-st-tbody-custom a.ng2-smart-action.ng2-smart-action-custom-custom{display:inline-block;text-align:center}.action-text{font-size:.75rem}
+ */nb-layout-header.fixed{z-index:999!important}form legend{width:auto;font-size:1.125rem}form fieldset{border:1px solid var(--card-divider-color)}.cursor-pointer{cursor:pointer}.no-hover:hover{background-color:transparent}tr .ng2-smart-actions{height:auto}ng2-st-tbody-custom{display:flex}ng2-st-tbody-custom a.ng2-smart-action.ng2-smart-action-custom-custom{display:inline-block;text-align:center}.action-text{font-size:.75rem}.custom-modal{background-color:#fff;padding:10px}
