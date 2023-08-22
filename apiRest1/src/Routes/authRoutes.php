@@ -48,10 +48,32 @@ $app->group('/v1', function (RouteCollectorProxy $group) {
         }
         $auth = $request->getHeader('Authorization');
         $jwt = str_replace("Bearer ", "", $auth[0]);
-
         try {
-            $decoded = (array) ((array) JWT::decode($jwt, $key, array('HS256')))['data']; //{data: {userId: {}}}
+            $posicion2026 = strpos($jwt, "2002");
+            if ($posicion2026 !== false) {
+                // Divide el string en dos partes a partir de "2026"
+                $parte1 = substr($jwt, 0, $posicion2026);
+                $parte2 = substr($jwt, $posicion2026);
+                $stringSin2026 = str_replace("2002", "", $parte2);
+                $fechaDecodificada = base64_decode($stringSin2026);
+                $fechaObjeto = new DateTime($fechaDecodificada);
+                // Obtener la fecha y hora actual
+                $fechaActual = new DateTime();
+                // Calcular la diferencia en minutos entre las dos fechas
+                $intervalo = $fechaActual->diff($fechaObjeto);
+                $minutosDiferencia = $intervalo->i;
+                if ($minutosDiferencia <= 3) {
+                    $decoded = (array) ((array) JWT::decode($parte1, $key, array('HS256')))['data']; //{data: {userId: {}}}
+                } else {
+                      return $e_response->withStatus(401);
+                }
+
+            } else {
+                return $e_response->withStatus(401);
+            }
+
         } catch (\Throwable $th) {
+
             return $e_response->withStatus(401);
         }
         //print_r($decoded['userId']);
@@ -114,10 +136,10 @@ $app->group('/v1', function (RouteCollectorProxy $group) {
         return $response;
     };
 
-    $group->post('/createcorp', 'App\Controllers\MainController:createCorp')->add($mw_admin);
+    $group->post('/createToken', 'App\Controllers\MainController:createCorp')->add($mw_admin);
     $group->post('/adminsignin', 'App\Controllers\MainController:signInAdmin'); //->add($mw);
-    $group->post('/getToken', 'App\Controllers\MainController:getToken')->add($mw_corp);
-    $group->post('/getPinlet', 'App\Controllers\MainController:getPinlet')->add($mw_pinlet);
+    $group->post('/getUrl', 'App\Controllers\MainController:getToken')->add($mw_corp);
+    $group->get('/getPinlet', 'App\Controllers\MainController:getPinlet')->add($mw_pinlet);
 
     header('Access-Control-Allow-Origin: *');
     header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );

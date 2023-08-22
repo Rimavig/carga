@@ -6,6 +6,6 @@
   $error_100_mensaje="Error con Servidor";
   $error_100_causa="Credenciales invalidas";
 
-  $error_101_mensaje="Error con Servidor";
+  $error_101_mensaje="Error de Autenticación";
   $error_101_causa="Las credenciales proporcionadas y el número de cédula no coinciden";
 ?>

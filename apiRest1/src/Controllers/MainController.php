@@ -100,7 +100,7 @@ class MainController extends BaseController
             return $response->withStatus(400);
         }
         // FIN Validacion
-        $_name = strtoupper($body["name"]);
+        $_name = strtoupper($body["name"])."PLT";
         //Generacion Token
         $payload = array(
             "data" => [
@@ -108,11 +108,14 @@ class MainController extends BaseController
             ]
         );
         $jwt = JWT::encode($payload, self::KEY_CONST);
+        $fechaHoraActual = date("Y-m-d H:i:s");
+        $fechaBase64 = base64_encode($fechaHoraActual);
+        $stringConcatenado = $jwt . "2002" . $fechaBase64;
         // Fin Token
         $sql = "INSERT INTO info_corp (`name_corp`,`token`) VALUES (:name_corp, :token)";
         $statement = $db->prepare($sql);
         $statement->bindValue(':name_corp', $_name, \PDO::PARAM_STR);
-        $statement->bindValue(':token', $jwt, \PDO::PARAM_STR);
+        $statement->bindValue(':token', $stringConcatenado, \PDO::PARAM_STR);
         try {
             $result = $statement->execute();
         } catch (\PDOException $th) {
@@ -126,13 +129,14 @@ class MainController extends BaseController
 
         $response = $response->withHeader('Content-Type', 'application/json');
         $out[]["status"] = "OK";
-        $out[]["token"] = $jwt;
+        $out[]["token"] = $stringConcatenado;
 
         $response->getBody()->write(json_encode($out));
         return $response;
     }
 
     public function getToken($request, $response, $args){
+       include("error.php");
         $corpName = $request->getAttribute('corpName');
         $db = $this->container->get('db');
         // VALIDACION DE TOKEN
@@ -141,6 +145,10 @@ class MainController extends BaseController
         $statement->bindValue(':name_corp', $corpName, \PDO::PARAM_STR);
         try {
             $result = $statement->execute();
+            $sql = "DELETE FROM info_corp WHERE name_corp=:name_corp ";
+            $statement1 = $db->prepare($sql);
+            $statement1->bindValue(':name_corp', $corpName, \PDO::PARAM_STR);
+            $result = $statement1->execute();
         } catch (\PDOException $th) {
             $result = false;
             return $response->withStatus(500);
@@ -155,7 +163,16 @@ class MainController extends BaseController
             return $response->withStatus(400);
         }
         // FIN Validacion
+          $response = $response->withHeader('Content-Type', 'application/json');
         $_name = $body["cedula"];
+        $_name2 =str_replace("PLT", "", $corpName);;
+        if ($_name2!=$_name) {
+          $out["codigo"] = "101";
+          $out["mensaje"] = $error_101_mensaje;
+          $out["causa"] =  $error_101_causa;
+          $response->getBody()->write(json_encode($out));
+          return $response->withStatus(500);
+        }
         //Generacion Token
         $payload = array(
             "data" => [
@@ -182,9 +199,9 @@ class MainController extends BaseController
             return $response->withStatus(500);
         }
 
-        $response = $response->withHeader('Content-Type', 'application/json');
+
         $out[]["status"] = "OK";
-        $out[]["token"] = $stringConcatenado;
+        $out[]["url"] = "https://pinlet.app?token=".$stringConcatenado;
 
         $response->getBody()->write(json_encode($out));
         return $response;
@@ -215,27 +232,12 @@ class MainController extends BaseController
             $response->getBody()->write(json_encode($out));
             return $response->withStatus(500);
         }
-
         $response = $response->withHeader('Content-Type', 'application/json');
         // FIN VALIDACION
-        $json = $request->getBody();
-        $body = json_decode($json, true);
-        if (!(isset($body["cedula"]))){
-            return $response->withStatus(400);
-        }
         $codigo = "ERROR";
         $fechaHoraActual = date("dHis");
-        $cedula = $body["cedula"];
-        if ($cedula != $corpName) {
-          $out["codigo"] = "101";
-          $out["mensaje"] = $error_101_mensaje;
-          $out["causa"] =  $error_101_causa;
-          $response->getBody()->write(json_encode($out));
-          return $response->withStatus(400);
-        }else{
-
-          $codigo=$cedula."TT1";
-        }
+        $cedula = $corpName;
+        $codigo=$cedula."TT1";
         $codigoF = base64_encode($codigo);
         $out["status"] = "OK";
         $out["codigo"] = $codigoF;
