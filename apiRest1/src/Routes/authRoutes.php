@@ -140,7 +140,20 @@ $app->group('/v1', function (RouteCollectorProxy $group) {
     $group->post('/adminsignin', 'App\Controllers\MainController:signInAdmin'); //->add($mw);
     $group->post('/getUrl', 'App\Controllers\MainController:getToken')->add($mw_corp);
     $group->get('/getPinlet', 'App\Controllers\MainController:getPinlet')->add($mw_pinlet);
+    $group->post('/addInvitation', 'App\Controllers\MainController:addInvitation')->add($mw_corp);
+    $group->post('/deleteInvitation', 'App\Controllers\MainController:deleteInvitation')->add($mw_corp);
+    $group->post('/updateInvitation', 'App\Controllers\MainController:updateInvitation')->add($mw_corp);
+    $group->post('/updateStatusInvitation', 'App\Controllers\MainController:updateStatusInvitation')->add($mw_corp);
+    $group->post('/getInvitation', 'App\Controllers\MainController:getInvitation')->add($mw_corp);
+    $group->post('/getGroupInvitation', 'App\Controllers\MainController:getGroupInvitation')->add($mw_corp);
 
-    header('Access-Control-Allow-Origin: *');
-    header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );
+      header('Access-Control-Allow-Origin:  *');
+     header( 'Access-Control-Allow-Headers: Authorization, Content-Type' );
+     //header('Access-Control-Allow-Origin','http://localhost:4200');
+     header('Access-Control-Allow-Methods: *');
+     header('Access-Control-Allow-Credentials: true');
+     if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+           header('HTTP/1.1 200 OK');
+         exit();
+       }
 });
