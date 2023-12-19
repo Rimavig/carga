@@ -246,7 +246,7 @@ class MainController extends BaseController
           $sql = "DELETE FROM info_corp WHERE name_corp=:name_corp ";
           $statement1 = $db->prepare($sql);
           $statement1->bindValue(':name_corp', $corpName, \PDO::PARAM_STR);
-        //  $result = $statement1->execute();
+          $result = $statement1->execute();
         }
         // FIN VALIDACION
         $json = $request->getBody();
@@ -336,11 +336,11 @@ class MainController extends BaseController
         }
 
         if (empty($errors)) {
-          $sql = "INSERT INTO pl_invitacion_normal (`id_lugar`,`id_invitacion_diners`,`socio`,`visitante`,`cedula`,`placa`,`observacion`,`tipo`,`fecha_inicio`,`fecha_termino`)
-          VALUES (:id_place, :id_diners, :resident, :visitor, :id, :license_plate, :observation, :type, :start_date, :end_date)";
+          $sql = "INSERT INTO pl_invitacion_normal (`id_lugar`,`id_invitacion_diners`,`socio`,`visitante`,`cedula`,`placa`,`observacion`,`tipo`,`fecha_inicio`,`fecha_termino`,`usuario_creacion`)
+          VALUES (:id_place, :id_diners, :resident, :visitor, :id, :license_plate, :observation, :type, :start_date, :end_date, :usuario_creacion)";
           if (strpos($corpName, "PLT-Admin") !== false) {
-            $sql = "INSERT INTO pl_invitacion_ocasional (`id_lugar`,`id_invitacion_diners`,`socio`,`visitante`,`cedula`,`placa`,`observacion`,`tipo`,`fecha_inicio`,`fecha_termino`)
-            VALUES (:id_place, :id_diners, :resident, :visitor, :id, :license_plate, :observation, :type, :start_date, :end_date)";
+            $sql = "INSERT INTO pl_invitacion_ocasional (`id_lugar`,`id_invitacion_diners`,`socio`,`visitante`,`cedula`,`placa`,`observacion`,`tipo`,`fecha_inicio`,`fecha_termino`,`usuario_creacion`)
+            VALUES (:id_place, :id_diners, :resident, :visitor, :id, :license_plate, :observation, :type, :start_date, :end_date, :usuario_creacion)";
           }
           $statement = $db->prepare($sql);
           $statement->bindValue(':id_place', $id_place, \PDO::PARAM_STR);
@@ -353,6 +353,7 @@ class MainController extends BaseController
           $statement->bindValue(':type', $type, \PDO::PARAM_STR);
           $statement->bindValue(':start_date', $start_date, \PDO::PARAM_STR);
           $statement->bindValue(':end_date', $end_date, \PDO::PARAM_STR);
+          $statement->bindValue(':usuario_creacion', $corpName, \PDO::PARAM_STR);
           try {
               $result = $statement->execute();
               $id_invitacion=$db->lastInsertId();
@@ -681,9 +682,9 @@ class MainController extends BaseController
               $result = $statement->execute();
               while($item = $statement->fetch()){
                 if ($item->fecha_ingreso === null && $item->fecha_salida === null && $item->fecha_termino > date('Y-m-d H:i:s')) {
-                  $sql = "UPDATE pl_invitacion_normal SET id_invitacion_diners= :id_diners, visitante= :visitor, cedula= :id, placa= :license_plate, observacion= :observation,  tipo= :type, fecha_inicio= :start_date, fecha_termino= :end_date   WHERE id_invitacion_normal=:id_invitation ";
+                  $sql = "UPDATE pl_invitacion_normal SET id_invitacion_diners= :id_diners, visitante= :visitor, cedula= :id, placa= :license_plate, observacion= :observation,  tipo= :type, fecha_inicio= :start_date, fecha_termino= :end_date, usuario_modificacion= :usuario_modificacion,fecha_modificacion = NOW()   WHERE id_invitacion_normal=:id_invitation ";
                   if (strpos($corpName, "PLT-Admin") !== false) {
-                    $sql = "UPDATE pl_invitacion_ocasional SET id_invitacion_diners= :id_diners, visitante= :visitor, cedula= :id, placa= :license_plate, observacion= :observation,  tipo= :type, fecha_inicio= :start_date, fecha_termino= :end_date   WHERE id_invitacion_normal=:id_invitation ";
+                    $sql = "UPDATE pl_invitacion_ocasional SET id_invitacion_diners= :id_diners, visitante= :visitor, cedula= :id, placa= :license_plate, observacion= :observation,  tipo= :type, fecha_inicio= :start_date, fecha_termino= :end_date, usuario_modificacion= :usuario_modificacion ,fecha_modificacion = NOW()   WHERE id_invitacion_normal=:id_invitation ";
                   }
                   $statement = $db->prepare($sql);
                   $statement->bindValue(':id_invitation',  $id_invitation, \PDO::PARAM_STR);
@@ -695,6 +696,7 @@ class MainController extends BaseController
                   $statement->bindValue(':type', $type, \PDO::PARAM_STR);
                   $statement->bindValue(':start_date', $start_date, \PDO::PARAM_STR);
                   $statement->bindValue(':end_date', $end_date, \PDO::PARAM_STR);
+                  $statement->bindValue(':usuario_modificacion', $corpName, \PDO::PARAM_STR);
                   $result = $statement->execute();
                 }else{
                   $out["error"] = "ERROR";
@@ -868,13 +870,14 @@ class MainController extends BaseController
               $result = $statement->execute();
               while($item = $statement->fetch()){
                 if ($item->fecha_ingreso === null && $item->fecha_salida === null && $item->fecha_termino > date('Y-m-d H:i:s')) {
-                  $sql = "UPDATE pl_invitacion_normal SET estado= :status WHERE id_invitacion_normal=:id_invitation ";
+                  $sql = "UPDATE pl_invitacion_normal SET estado= :status, usuario_modificacion= :usuario_modificacion ,fecha_modificacion = NOW()  WHERE id_invitacion_normal=:id_invitation ";
                   if (strpos($corpName, "PLT-Admin") !== false) {
-                    $sql = "UPDATE pl_invitacion_ocasional SET estado= :status WHERE id_invitacion_normal=:id_invitation ";
+                    $sql = "UPDATE pl_invitacion_ocasional SET estado= :status, usuario_modificacion= :usuario_modificacion ,fecha_modificacion = NOW()  WHERE id_invitacion_normal=:id_invitation ";
                   }
                   $statement = $db->prepare($sql);
                   $statement->bindValue(':status',  $status, \PDO::PARAM_STR);
                   $statement->bindValue(':id_invitation',  $id_invitation, \PDO::PARAM_STR);
+                  $statement->bindValue(':usuario_modificacion', $corpName, \PDO::PARAM_STR);
                   $result = $statement->execute();
                 }else{
                   $out["error"] = "ERROR";
@@ -934,7 +937,7 @@ class MainController extends BaseController
         $codigo = "ERROR";
         $fechaHoraActual = date("dHis");
         $cedula = $corpName;
-        $codigo=$cedula."TT".$fechaHoraActual."DNS";
+        $codigo=$cedula."TTR".$fechaHoraActual."DNS";
         $codigoF = base64_encode($codigo);
         $out["status"] = "OK";
         $out["codigo"] = $codigoF;
