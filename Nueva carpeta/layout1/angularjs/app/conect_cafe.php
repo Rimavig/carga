@@ -1,8 +1,8 @@
 <?php
 //ini_set('display_startup_errors', 1);
 //ini_set('display_errors', 1);
-///GLOBALS['THRIFT_ROOT'] = '/var/www/html/thrift-0.11.0/thrift-0.11.0/lib/php/lib';
-$GLOBALS['THRIFT_ROOT'] = 'C:\xampp\htdocs\teatro_admin\thrift-0.11.0\thrift-0.11.0\lib\php\lib';
+$GLOBALS['THRIFT_ROOT'] = '/var/www/html/thrift-0.11.0/thrift-0.11.0/lib/php/lib';
+//$GLOBALS['THRIFT_ROOT'] = 'C:\xampp\htdocs\teatro_admin\thrift-0.11.0\thrift-0.11.0\lib\php\lib';
 require_once $GLOBALS['THRIFT_ROOT'].'/Types2.php';
 require_once $GLOBALS['THRIFT_ROOT'].'/Inventario.php';
 require_once $GLOBALS['THRIFT_ROOT'].'/Thrift/Transport/TTransport.php';
@@ -70,6 +70,15 @@ try{
     $ordenCompraT =new OrdenCompra();
     $ordenCompraItemT =new OrdenCompraItem();
     $proveedorT =new Proveedor();
+    $tarjetaT =new Tarjeta();
+    $bancoT =new Banco();
+    $compraTarjetaT =new CompraTarjeta();
+    $facturacionT =new Facturacion();
+    $compraT =new Compra();
+    $precuentaT =new Precuenta();
+    $reservaT =new Reserva();
+    $pedidoT =new Pedido();
+    $pedidoICT =new PedidoIC();
 }catch (\TException  $e) {
 
 }catch (Exception  $e) {

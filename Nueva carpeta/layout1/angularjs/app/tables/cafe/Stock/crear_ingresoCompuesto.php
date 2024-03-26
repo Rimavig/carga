@@ -3,6 +3,7 @@ include("../../../conect_cafe.php");
 include("../../../conect.php");
 include("../../../autenticacion.php");
 $re = $client->getPerfilRol($_SESSION["id"], "91");
+$compuestoT->tipo="S";
 $lista = $client10->getAllCompuesto($busquedaT, $compuestoT);
 $resultado = "" . $re;
 $usuarios = explode(',', $resultado);
@@ -14,7 +15,6 @@ foreach ($usuarios as $llave => $valores1) {
         $crear = "";
     }
 }
-
     ?>
     <div class="modal-dialog modal-mantenimiento ">
         <div class="modal-content  ">

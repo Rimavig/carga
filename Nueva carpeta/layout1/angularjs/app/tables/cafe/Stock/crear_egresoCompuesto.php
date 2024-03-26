@@ -3,6 +3,7 @@ include("../../../conect_cafe.php");
 include("../../../conect.php");
 include("../../../autenticacion.php");
 $re = $client->getPerfilRol($_SESSION["id"], "92");
+$compuestoT->tipo="S";
 $lista = $client10->getAllCompuesto($busquedaT, $compuestoT);
 $resultado = "" . $re;
 $usuarios = explode(',', $resultado);

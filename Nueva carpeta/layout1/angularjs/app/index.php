@@ -752,7 +752,7 @@ foreach ($usuarios as $llave => $valores1) {
                                 <li class="<?php echo $CVInventario; ?> " ng-class="{ active  : isActive('/inventario')}"><a href="#inventario"> Inventario</a></li>
                                 <li class="<?php echo $CVStock; ?> " ng-class="{ active  : isActive('/stock')}"><a href="#stock"> Stock</a></li>
                                 <li class="<?php echo $CVPromociones; ?> " ng-class="{ active  : isActive('/cafe-promocion')}"><a href="#cafe-promocion"> Promociones</a></li>
-
+                                <li class="<?php echo $CVPromociones; ?> " ng-class="{ active  : isActive('/cafe-compra')}"><a href="#cafe-compra"> Compra</a></li>
                             </ul>
                         </li>
                     <?php } ?>
@@ -1267,7 +1267,6 @@ foreach ($usuarios as $llave => $valores1) {
     <script src="../../../assets/global/plugins/slick/slick.js"></script>
     <script src="../../../assets/global/plugins/icheck/icheck.js"></script>
     <script src="../../../assets/global/plugins/switchery/switchery.js"></script>
-
     <script src="../../../assets/global/plugins/timepicker/jquery-ui-timepicker-addon.js"></script>
     <script src="../../../assets/global/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
     <script src="../../../assets/global/plugins/colorpicker/spectrum.js"></script>
@@ -1284,7 +1283,6 @@ foreach ($usuarios as $llave => $valores1) {
     <script src="../../../assets/global/plugins/fullcalendar/fullcalendar.min.js"></script>
     <script src="../../../assets/global/plugins/fullcalendar/locale/es.js"></script>
     <script src="../../../assets/global/plugins/countup/countUp.js"></script>
-
     <script src="../../../assets/global/plugins/bootstrap-loading/lada.min.js"></script>
     <script src="../../../assets/global/plugins/jstree/jstree.js"></script>
     <script src="../../../assets/global/plugins/datatables/jquery.dataTables.min.js"></script>
@@ -1354,6 +1352,7 @@ foreach ($usuarios as $llave => $valores1) {
     <script src="tables/cafe/Inventario/inventarioCtrl.js"></script>
     <script src="tables/cafe/Stock/stockCtrl.js"></script>
     <script src="tables/cafe/Promocion/promocionCtrl.js"></script>
+    <script src="tables/cafe/Compra/compraCtrl.js"></script>
     <!-- BOLETO SCRIPS -->
     <script src="../../../assets/boleto/js/modernizr-3.6.0.min.js"></script>
     <script src="../../../assets/boleto/js/plugins.js"></script>

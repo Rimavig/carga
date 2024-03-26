@@ -3,7 +3,7 @@ include ("../../../conect.php");
 include ("../../../conect_cafe.php");
 include ("../../../autenticacion.php");
 header("Content-type: application/json");
-$re = $client->getPerfilRol($_SESSION["id"],"1");
+$re = $client->getPerfilRol($_SESSION["id"],"90");
 $resultado = "".$re;
 $usuarios1= explode(',',$resultado);
 $editar="";
@@ -32,7 +32,7 @@ $text=$editar." ".$eliminar." ".$estado." ".$reset;
 function crearSwitch($id, $estadoValor, $etiquetasOnOff,  $esDisabled = false) {
     $estadoChecked = ($estadoValor === "S" || $estadoValor === "A") ? 'checked' : '';
     $estadoTexto = ($estadoValor === "S" || $estadoValor === "A") ? $etiquetasOnOff['on'] : $etiquetasOnOff['off'];
-    $disabledAttribute = $esDisabled ? 'disabled' : '';
+    $disabledAttribute = $esDisabled ? '' : 'disabled';
 
     return <<<HTML
     <div class="form-group">

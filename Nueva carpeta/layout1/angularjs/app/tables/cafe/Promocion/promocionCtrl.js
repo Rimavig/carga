@@ -186,7 +186,7 @@ angular.module("newApp").controller("promocionCtrl", [
         $("#MCafe").load(url, data, function () {
           $(".page-spinner-loader").addClass("hide");
           $("#MCafe").modal("show");
-
+          inputSelect();
           // Establece el precio inicial y actualiza el precio total al cargar el modal
           var precioInicial = $("#grupoC").find("option:first").data("precio");
           $("#precioC").val(precioInicial !== undefined ? precioInicial : 0);

@@ -30,7 +30,7 @@ function crearSwitch($id, $estadoValor, $etiquetasOnOff,$disabledAttribute2)
 {
     $estadoChecked = ($estadoValor === "S" || $estadoValor === "A") ? 'checked' : '';
     $estadoTexto = ($estadoValor === "S" || $estadoValor === "A") ? $etiquetasOnOff['on'] : $etiquetasOnOff['off'];
-    $disabledText = ($disabledAttribute2) ? 'disabled' : '';
+    $disabledText = ($disabledAttribute2) ? '' : 'disabled';
 
     return <<<HTML
     <div class="form-group">

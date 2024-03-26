@@ -192,6 +192,7 @@ angular.module("newApp").controller("stockCtrl", [
         $("#MCafe").load(url, data, function () {
           $(".page-spinner-loader").addClass("hide");
           $("#MCafe").modal("show");
+          inputSelect();
           var ruc = $("#proveedor").find("option:first").data("ruc");
           $("#ruc").val(ruc !== undefined ? ruc : 0);
           $("#proveedor").change(function () {

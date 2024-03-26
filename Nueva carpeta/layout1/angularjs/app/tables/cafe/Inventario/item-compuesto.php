@@ -4,7 +4,7 @@ include ("../../../conect_cafe.php");
 include ("../../../conect.php");
 include ("../../../autenticacion.php");
 include ("../../../directorio.php");
-$re = $client->getPerfilRol($_SESSION["id"],"45");
+$re = $client->getPerfilRol($_SESSION["id"],"90");
 $resultado = "".$re;
 $usuarios= explode(',',$resultado);
 $crear="hide";

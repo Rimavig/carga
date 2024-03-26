@@ -833,7 +833,7 @@ angular.module('newApp')
             var direccion=$(this).parents().find('#direccionF')[0].value;
             var correo=$(this).parents().find('#correoF')[0].value;
             var pasaporte=$(this).parents().find('#pasaporte')[0].value;
-            if ( document.getElementById( "idCompra" )) {
+            if ( document.getElementById( "idCompra")) {
                 var idUsuario=$(this).parents().find('#idUsuario')[0].value;
             }else{
                 var idUsuario=$(this).parents().find('#idUsuario1')[0].value;
@@ -2014,10 +2014,10 @@ angular.module('newApp')
             var fechaI=$(this).parents().find('#busquedaF')[0].value;
             var table = $('#table-editable').DataTable();
             var data="";
-            if ($('#table-editable').hasClass('clientes_data ')) {
+            if ($('#table-editable').hasClass('clientes_data')) {
                 data="tables/usuarios/usuarios-clientes_data.php?var1="+fechaI;
             }
-            if ($('#table-editable').hasClass('clientes_dataR2 ')) {
+            if ($('#table-editable').hasClass('clientes_dataR2')) {
                 data="tables/usuarios/usuarios-clientes_data2.php?var1="+fechaI;
             }
             table.ajax.url(data).load();
@@ -2225,7 +2225,7 @@ angular.module('newApp')
         });
     });
 
-      $scope.$on('$destroy', function () {
+      /* $scope.$on('$destroy', function () {
         $('#table-reservas').DataTable().clear().destroy();
         $('#table-ventas').DataTable().clear().destroy();
         $('#table-reservasP').DataTable().clear().destroy();
@@ -2300,5 +2300,25 @@ angular.module('newApp')
         $(document).off('click','.notaCreditoParcialMotivo');
         $(document).off('click','.notaCreditoParcial');
         $(document).off('click','.buscarRPC');
+      }); */
+      $scope.$on("$destroy", function () {
+        // Destruye todas las instancias de CKEDITOR
+        let editor = window["CKEDITOR"];
+        for (var name in editor.instances) {
+          if (editor.instances.hasOwnProperty(name)) {
+            editor.instances[name].destroy(true);
+          }
+        }
+  
+        // Destruye todas las instancias de DataTables
+        var tables = $.fn.dataTable.fnTables(true);
+        $(tables).each(function () {
+          $(this).dataTable().fnDestroy();
+        });
+  
+        // Desvincula todos los eventos 'click' de una sola vez
+        $(document).off("click");
+        $(document).off("change");
       });
-  }]);
+    },
+  ]);

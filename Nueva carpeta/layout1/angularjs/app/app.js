@@ -533,6 +533,10 @@ var MakeApp = angular
             templateUrl: 'tables/cafe/Promocion/promocionG.php',
             controller: 'promocionCtrl'
         })
+        .when('/cafe-compra', {
+            templateUrl: 'tables/cafe/Compra/compra.php',
+            controller: 'compraCtrl'
+        })
           //layout
         .when('/layout-api', {
             templateUrl: 'layout/api.html',

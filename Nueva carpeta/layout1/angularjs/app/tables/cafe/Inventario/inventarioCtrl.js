@@ -142,6 +142,7 @@ angular.module("newApp").controller("inventarioCtrl", [
         $("#MCafe").load(url, data, function () {
           $(".page-spinner-loader").addClass("hide");
           $("#MCafe").modal("show");
+          inputSelect();
         });
       }
       function initOrReloadTableSecundaria(tipo, columnDefs = [], id) {
@@ -507,7 +508,8 @@ angular.module("newApp").controller("inventarioCtrl", [
             return false;
           }
           cantidad = parseFloat(cantidad);
-          if (cantidad < 0) {
+          console.log(cantidad);
+          if (cantidad <= 0) {
             mostrarNotificacion("Ingrese cantidad");
             $(this).prop("disabled", false);
             return;

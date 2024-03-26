@@ -316,6 +316,240 @@ interface InventarioIf {
    * @return string
    */
   public function deleteProveedor(\Busqueda $busqueda, \Proveedor $proveedor);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Tarjeta $objeto
+   * @return \Tarjeta
+   */
+  public function getTarjeta(\Busqueda $busqueda, \Tarjeta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Tarjeta $objeto
+   * @return \Tarjeta[]
+   */
+  public function getAllTarjeta(\Busqueda $busqueda, \Tarjeta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Banco $objeto
+   * @return \Banco
+   */
+  public function getBanco(\Busqueda $busqueda, \Banco $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Banco $objeto
+   * @return \Banco[]
+   */
+  public function getAllBanco(\Busqueda $busqueda, \Banco $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \CompraTarjeta $objeto
+   * @return \CompraTarjeta
+   */
+  public function getCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \CompraTarjeta $objeto
+   * @return \CompraTarjeta[]
+   */
+  public function getAllCompraTarjeta_compra(\Busqueda $busqueda, \CompraTarjeta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \CompraTarjeta $objeto
+   * @return string
+   */
+  public function deleteCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \CompraTarjeta $objeto
+   * @return string
+   */
+  public function insertCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Facturacion $objeto
+   * @return \Facturacion
+   */
+  public function getFacturacion(\Busqueda $busqueda, \Facturacion $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Facturacion $objeto
+   * @return \Facturacion[]
+   */
+  public function getAllFacturacion_usuario(\Busqueda $busqueda, \Facturacion $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Facturacion $objeto
+   * @return string
+   */
+  public function updateFacturacion(\Busqueda $busqueda, \Facturacion $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Compra $objeto
+   * @return \Compra
+   */
+  public function getCompra(\Busqueda $busqueda, \Compra $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Compra $objeto
+   * @return \Compra[]
+   */
+  public function getAllCompra(\Busqueda $busqueda, \Compra $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Compra $objeto
+   * @return string
+   */
+  public function updateCompra(\Busqueda $busqueda, \Compra $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Compra $objeto
+   * @return string
+   */
+  public function insertCompra(\Busqueda $busqueda, \Compra $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Precuenta $objeto
+   * @return \Precuenta
+   */
+  public function getPrecuenta(\Busqueda $busqueda, \Precuenta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Precuenta $objeto
+   * @return \Precuenta[]
+   */
+  public function getAllPrecuenta(\Busqueda $busqueda, \Precuenta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Precuenta $objeto
+   * @return string
+   */
+  public function updateEstadoPrecuenta(\Busqueda $busqueda, \Precuenta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Precuenta $objeto
+   * @return string
+   */
+  public function updatePrecuenta(\Busqueda $busqueda, \Precuenta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Precuenta $objeto
+   * @return string
+   */
+  public function insertPrecuenta(\Busqueda $busqueda, \Precuenta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Precuenta $objeto
+   * @return string
+   */
+  public function deletePrecuenta(\Busqueda $busqueda, \Precuenta $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Reserva $objeto
+   * @return \Reserva
+   */
+  public function getReserva(\Busqueda $busqueda, \Reserva $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Reserva $objeto
+   * @return \Reserva[]
+   */
+  public function getAllReserva(\Busqueda $busqueda, \Reserva $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Reserva $objeto
+   * @return string
+   */
+  public function updateEstadoReserva(\Busqueda $busqueda, \Reserva $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Reserva $objeto
+   * @return string
+   */
+  public function updateReserva(\Busqueda $busqueda, \Reserva $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Reserva $objeto
+   * @return string
+   */
+  public function insertReserva(\Busqueda $busqueda, \Reserva $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Reserva $objeto
+   * @return string
+   */
+  public function deleteReserva(\Busqueda $busqueda, \Reserva $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Pedido $objeto
+   * @return \Pedido
+   */
+  public function getPedido(\Busqueda $busqueda, \Pedido $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Pedido $objeto
+   * @return \Pedido[]
+   */
+  public function getAllPedido(\Busqueda $busqueda, \Pedido $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Pedido $objeto
+   * @return string
+   */
+  public function updateEstadoPedido(\Busqueda $busqueda, \Pedido $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Pedido $objeto
+   * @return string
+   */
+  public function updatePedido(\Busqueda $busqueda, \Pedido $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Pedido $objeto
+   * @return string
+   */
+  public function insertPedido(\Busqueda $busqueda, \Pedido $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \Pedido $objeto
+   * @return string
+   */
+  public function deletePedido(\Busqueda $busqueda, \Pedido $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \PedidoIC $objeto
+   * @return \PedidoIC
+   */
+  public function getPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \PedidoIC $objeto
+   * @return \PedidoIC[]
+   */
+  public function getAllPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \PedidoIC $objeto
+   * @return string
+   */
+  public function updateEstadoPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \PedidoIC $objeto
+   * @return string
+   */
+  public function updatePedidoIC(\Busqueda $busqueda, \PedidoIC $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \PedidoIC $objeto
+   * @return string
+   */
+  public function insertPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto);
+  /**
+   * @param \Busqueda $busqueda
+   * @param \PedidoIC $objeto
+   * @return string
+   */
+  public function deletePedidoIC(\Busqueda $busqueda, \PedidoIC $objeto);
 }
 
 
@@ -2930,6 +3164,2034 @@ class InventarioClient implements \InventarioIf {
     throw new \Exception("deleteProveedor failed: unknown result");
   }
 
+  public function getTarjeta(\Busqueda $busqueda, \Tarjeta $objeto)
+  {
+    $this->send_getTarjeta($busqueda, $objeto);
+    return $this->recv_getTarjeta();
+  }
+
+  public function send_getTarjeta(\Busqueda $busqueda, \Tarjeta $objeto)
+  {
+    $args = new \Inventario_getTarjeta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getTarjeta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getTarjeta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getTarjeta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getTarjeta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getTarjeta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getTarjeta failed: unknown result");
+  }
+
+  public function getAllTarjeta(\Busqueda $busqueda, \Tarjeta $objeto)
+  {
+    $this->send_getAllTarjeta($busqueda, $objeto);
+    return $this->recv_getAllTarjeta();
+  }
+
+  public function send_getAllTarjeta(\Busqueda $busqueda, \Tarjeta $objeto)
+  {
+    $args = new \Inventario_getAllTarjeta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllTarjeta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllTarjeta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllTarjeta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllTarjeta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllTarjeta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllTarjeta failed: unknown result");
+  }
+
+  public function getBanco(\Busqueda $busqueda, \Banco $objeto)
+  {
+    $this->send_getBanco($busqueda, $objeto);
+    return $this->recv_getBanco();
+  }
+
+  public function send_getBanco(\Busqueda $busqueda, \Banco $objeto)
+  {
+    $args = new \Inventario_getBanco_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getBanco', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getBanco', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getBanco()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getBanco_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getBanco_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getBanco failed: unknown result");
+  }
+
+  public function getAllBanco(\Busqueda $busqueda, \Banco $objeto)
+  {
+    $this->send_getAllBanco($busqueda, $objeto);
+    return $this->recv_getAllBanco();
+  }
+
+  public function send_getAllBanco(\Busqueda $busqueda, \Banco $objeto)
+  {
+    $args = new \Inventario_getAllBanco_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllBanco', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllBanco', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllBanco()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllBanco_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllBanco_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllBanco failed: unknown result");
+  }
+
+  public function getCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $this->send_getCompraTarjeta($busqueda, $objeto);
+    return $this->recv_getCompraTarjeta();
+  }
+
+  public function send_getCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $args = new \Inventario_getCompraTarjeta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getCompraTarjeta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getCompraTarjeta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getCompraTarjeta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getCompraTarjeta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getCompraTarjeta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getCompraTarjeta failed: unknown result");
+  }
+
+  public function getAllCompraTarjeta_compra(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $this->send_getAllCompraTarjeta_compra($busqueda, $objeto);
+    return $this->recv_getAllCompraTarjeta_compra();
+  }
+
+  public function send_getAllCompraTarjeta_compra(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $args = new \Inventario_getAllCompraTarjeta_compra_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllCompraTarjeta_compra', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllCompraTarjeta_compra', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllCompraTarjeta_compra()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllCompraTarjeta_compra_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllCompraTarjeta_compra_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllCompraTarjeta_compra failed: unknown result");
+  }
+
+  public function deleteCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $this->send_deleteCompraTarjeta($busqueda, $objeto);
+    return $this->recv_deleteCompraTarjeta();
+  }
+
+  public function send_deleteCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $args = new \Inventario_deleteCompraTarjeta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'deleteCompraTarjeta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('deleteCompraTarjeta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_deleteCompraTarjeta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_deleteCompraTarjeta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_deleteCompraTarjeta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("deleteCompraTarjeta failed: unknown result");
+  }
+
+  public function insertCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $this->send_insertCompraTarjeta($busqueda, $objeto);
+    return $this->recv_insertCompraTarjeta();
+  }
+
+  public function send_insertCompraTarjeta(\Busqueda $busqueda, \CompraTarjeta $objeto)
+  {
+    $args = new \Inventario_insertCompraTarjeta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'insertCompraTarjeta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('insertCompraTarjeta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_insertCompraTarjeta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_insertCompraTarjeta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_insertCompraTarjeta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("insertCompraTarjeta failed: unknown result");
+  }
+
+  public function getFacturacion(\Busqueda $busqueda, \Facturacion $objeto)
+  {
+    $this->send_getFacturacion($busqueda, $objeto);
+    return $this->recv_getFacturacion();
+  }
+
+  public function send_getFacturacion(\Busqueda $busqueda, \Facturacion $objeto)
+  {
+    $args = new \Inventario_getFacturacion_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getFacturacion', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getFacturacion', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getFacturacion()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getFacturacion_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getFacturacion_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getFacturacion failed: unknown result");
+  }
+
+  public function getAllFacturacion_usuario(\Busqueda $busqueda, \Facturacion $objeto)
+  {
+    $this->send_getAllFacturacion_usuario($busqueda, $objeto);
+    return $this->recv_getAllFacturacion_usuario();
+  }
+
+  public function send_getAllFacturacion_usuario(\Busqueda $busqueda, \Facturacion $objeto)
+  {
+    $args = new \Inventario_getAllFacturacion_usuario_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllFacturacion_usuario', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllFacturacion_usuario', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllFacturacion_usuario()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllFacturacion_usuario_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllFacturacion_usuario_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllFacturacion_usuario failed: unknown result");
+  }
+
+  public function updateFacturacion(\Busqueda $busqueda, \Facturacion $objeto)
+  {
+    $this->send_updateFacturacion($busqueda, $objeto);
+    return $this->recv_updateFacturacion();
+  }
+
+  public function send_updateFacturacion(\Busqueda $busqueda, \Facturacion $objeto)
+  {
+    $args = new \Inventario_updateFacturacion_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updateFacturacion', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updateFacturacion', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updateFacturacion()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updateFacturacion_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updateFacturacion_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updateFacturacion failed: unknown result");
+  }
+
+  public function getCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $this->send_getCompra($busqueda, $objeto);
+    return $this->recv_getCompra();
+  }
+
+  public function send_getCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $args = new \Inventario_getCompra_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getCompra', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getCompra', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getCompra()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getCompra_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getCompra_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getCompra failed: unknown result");
+  }
+
+  public function getAllCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $this->send_getAllCompra($busqueda, $objeto);
+    return $this->recv_getAllCompra();
+  }
+
+  public function send_getAllCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $args = new \Inventario_getAllCompra_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllCompra', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllCompra', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllCompra()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllCompra_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllCompra_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllCompra failed: unknown result");
+  }
+
+  public function updateCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $this->send_updateCompra($busqueda, $objeto);
+    return $this->recv_updateCompra();
+  }
+
+  public function send_updateCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $args = new \Inventario_updateCompra_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updateCompra', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updateCompra', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updateCompra()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updateCompra_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updateCompra_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updateCompra failed: unknown result");
+  }
+
+  public function insertCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $this->send_insertCompra($busqueda, $objeto);
+    return $this->recv_insertCompra();
+  }
+
+  public function send_insertCompra(\Busqueda $busqueda, \Compra $objeto)
+  {
+    $args = new \Inventario_insertCompra_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'insertCompra', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('insertCompra', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_insertCompra()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_insertCompra_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_insertCompra_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("insertCompra failed: unknown result");
+  }
+
+  public function getPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $this->send_getPrecuenta($busqueda, $objeto);
+    return $this->recv_getPrecuenta();
+  }
+
+  public function send_getPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $args = new \Inventario_getPrecuenta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getPrecuenta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getPrecuenta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getPrecuenta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getPrecuenta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getPrecuenta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getPrecuenta failed: unknown result");
+  }
+
+  public function getAllPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $this->send_getAllPrecuenta($busqueda, $objeto);
+    return $this->recv_getAllPrecuenta();
+  }
+
+  public function send_getAllPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $args = new \Inventario_getAllPrecuenta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllPrecuenta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllPrecuenta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllPrecuenta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllPrecuenta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllPrecuenta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllPrecuenta failed: unknown result");
+  }
+
+  public function updateEstadoPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $this->send_updateEstadoPrecuenta($busqueda, $objeto);
+    return $this->recv_updateEstadoPrecuenta();
+  }
+
+  public function send_updateEstadoPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $args = new \Inventario_updateEstadoPrecuenta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updateEstadoPrecuenta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updateEstadoPrecuenta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updateEstadoPrecuenta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updateEstadoPrecuenta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updateEstadoPrecuenta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updateEstadoPrecuenta failed: unknown result");
+  }
+
+  public function updatePrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $this->send_updatePrecuenta($busqueda, $objeto);
+    return $this->recv_updatePrecuenta();
+  }
+
+  public function send_updatePrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $args = new \Inventario_updatePrecuenta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updatePrecuenta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updatePrecuenta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updatePrecuenta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updatePrecuenta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updatePrecuenta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updatePrecuenta failed: unknown result");
+  }
+
+  public function insertPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $this->send_insertPrecuenta($busqueda, $objeto);
+    return $this->recv_insertPrecuenta();
+  }
+
+  public function send_insertPrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $args = new \Inventario_insertPrecuenta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'insertPrecuenta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('insertPrecuenta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_insertPrecuenta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_insertPrecuenta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_insertPrecuenta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("insertPrecuenta failed: unknown result");
+  }
+
+  public function deletePrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $this->send_deletePrecuenta($busqueda, $objeto);
+    return $this->recv_deletePrecuenta();
+  }
+
+  public function send_deletePrecuenta(\Busqueda $busqueda, \Precuenta $objeto)
+  {
+    $args = new \Inventario_deletePrecuenta_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'deletePrecuenta', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('deletePrecuenta', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_deletePrecuenta()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_deletePrecuenta_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_deletePrecuenta_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("deletePrecuenta failed: unknown result");
+  }
+
+  public function getReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $this->send_getReserva($busqueda, $objeto);
+    return $this->recv_getReserva();
+  }
+
+  public function send_getReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $args = new \Inventario_getReserva_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getReserva', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getReserva', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getReserva()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getReserva_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getReserva_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getReserva failed: unknown result");
+  }
+
+  public function getAllReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $this->send_getAllReserva($busqueda, $objeto);
+    return $this->recv_getAllReserva();
+  }
+
+  public function send_getAllReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $args = new \Inventario_getAllReserva_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllReserva', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllReserva', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllReserva()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllReserva_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllReserva_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllReserva failed: unknown result");
+  }
+
+  public function updateEstadoReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $this->send_updateEstadoReserva($busqueda, $objeto);
+    return $this->recv_updateEstadoReserva();
+  }
+
+  public function send_updateEstadoReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $args = new \Inventario_updateEstadoReserva_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updateEstadoReserva', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updateEstadoReserva', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updateEstadoReserva()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updateEstadoReserva_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updateEstadoReserva_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updateEstadoReserva failed: unknown result");
+  }
+
+  public function updateReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $this->send_updateReserva($busqueda, $objeto);
+    return $this->recv_updateReserva();
+  }
+
+  public function send_updateReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $args = new \Inventario_updateReserva_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updateReserva', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updateReserva', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updateReserva()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updateReserva_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updateReserva_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updateReserva failed: unknown result");
+  }
+
+  public function insertReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $this->send_insertReserva($busqueda, $objeto);
+    return $this->recv_insertReserva();
+  }
+
+  public function send_insertReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $args = new \Inventario_insertReserva_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'insertReserva', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('insertReserva', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_insertReserva()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_insertReserva_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_insertReserva_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("insertReserva failed: unknown result");
+  }
+
+  public function deleteReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $this->send_deleteReserva($busqueda, $objeto);
+    return $this->recv_deleteReserva();
+  }
+
+  public function send_deleteReserva(\Busqueda $busqueda, \Reserva $objeto)
+  {
+    $args = new \Inventario_deleteReserva_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'deleteReserva', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('deleteReserva', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_deleteReserva()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_deleteReserva_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_deleteReserva_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("deleteReserva failed: unknown result");
+  }
+
+  public function getPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $this->send_getPedido($busqueda, $objeto);
+    return $this->recv_getPedido();
+  }
+
+  public function send_getPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $args = new \Inventario_getPedido_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getPedido', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getPedido', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getPedido()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getPedido_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getPedido_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getPedido failed: unknown result");
+  }
+
+  public function getAllPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $this->send_getAllPedido($busqueda, $objeto);
+    return $this->recv_getAllPedido();
+  }
+
+  public function send_getAllPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $args = new \Inventario_getAllPedido_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllPedido', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllPedido', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllPedido()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllPedido_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllPedido_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllPedido failed: unknown result");
+  }
+
+  public function updateEstadoPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $this->send_updateEstadoPedido($busqueda, $objeto);
+    return $this->recv_updateEstadoPedido();
+  }
+
+  public function send_updateEstadoPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $args = new \Inventario_updateEstadoPedido_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updateEstadoPedido', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updateEstadoPedido', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updateEstadoPedido()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updateEstadoPedido_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updateEstadoPedido_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updateEstadoPedido failed: unknown result");
+  }
+
+  public function updatePedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $this->send_updatePedido($busqueda, $objeto);
+    return $this->recv_updatePedido();
+  }
+
+  public function send_updatePedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $args = new \Inventario_updatePedido_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updatePedido', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updatePedido', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updatePedido()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updatePedido_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updatePedido_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updatePedido failed: unknown result");
+  }
+
+  public function insertPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $this->send_insertPedido($busqueda, $objeto);
+    return $this->recv_insertPedido();
+  }
+
+  public function send_insertPedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $args = new \Inventario_insertPedido_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'insertPedido', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('insertPedido', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_insertPedido()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_insertPedido_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_insertPedido_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("insertPedido failed: unknown result");
+  }
+
+  public function deletePedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $this->send_deletePedido($busqueda, $objeto);
+    return $this->recv_deletePedido();
+  }
+
+  public function send_deletePedido(\Busqueda $busqueda, \Pedido $objeto)
+  {
+    $args = new \Inventario_deletePedido_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'deletePedido', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('deletePedido', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_deletePedido()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_deletePedido_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_deletePedido_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("deletePedido failed: unknown result");
+  }
+
+  public function getPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $this->send_getPedidoIC($busqueda, $objeto);
+    return $this->recv_getPedidoIC();
+  }
+
+  public function send_getPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $args = new \Inventario_getPedidoIC_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getPedidoIC', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getPedidoIC', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getPedidoIC()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getPedidoIC_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getPedidoIC_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getPedidoIC failed: unknown result");
+  }
+
+  public function getAllPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $this->send_getAllPedidoIC($busqueda, $objeto);
+    return $this->recv_getAllPedidoIC();
+  }
+
+  public function send_getAllPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $args = new \Inventario_getAllPedidoIC_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'getAllPedidoIC', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('getAllPedidoIC', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_getAllPedidoIC()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_getAllPedidoIC_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_getAllPedidoIC_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("getAllPedidoIC failed: unknown result");
+  }
+
+  public function updateEstadoPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $this->send_updateEstadoPedidoIC($busqueda, $objeto);
+    return $this->recv_updateEstadoPedidoIC();
+  }
+
+  public function send_updateEstadoPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $args = new \Inventario_updateEstadoPedidoIC_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updateEstadoPedidoIC', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updateEstadoPedidoIC', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updateEstadoPedidoIC()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updateEstadoPedidoIC_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updateEstadoPedidoIC_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updateEstadoPedidoIC failed: unknown result");
+  }
+
+  public function updatePedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $this->send_updatePedidoIC($busqueda, $objeto);
+    return $this->recv_updatePedidoIC();
+  }
+
+  public function send_updatePedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $args = new \Inventario_updatePedidoIC_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'updatePedidoIC', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('updatePedidoIC', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_updatePedidoIC()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_updatePedidoIC_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_updatePedidoIC_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("updatePedidoIC failed: unknown result");
+  }
+
+  public function insertPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $this->send_insertPedidoIC($busqueda, $objeto);
+    return $this->recv_insertPedidoIC();
+  }
+
+  public function send_insertPedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $args = new \Inventario_insertPedidoIC_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'insertPedidoIC', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('insertPedidoIC', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_insertPedidoIC()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_insertPedidoIC_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_insertPedidoIC_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("insertPedidoIC failed: unknown result");
+  }
+
+  public function deletePedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $this->send_deletePedidoIC($busqueda, $objeto);
+    return $this->recv_deletePedidoIC();
+  }
+
+  public function send_deletePedidoIC(\Busqueda $busqueda, \PedidoIC $objeto)
+  {
+    $args = new \Inventario_deletePedidoIC_args();
+    $args->busqueda = $busqueda;
+    $args->objeto = $objeto;
+    $bin_accel = ($this->output_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_write_binary');
+    if ($bin_accel)
+    {
+      thrift_protocol_write_binary($this->output_, 'deletePedidoIC', TMessageType::CALL, $args, $this->seqid_, $this->output_->isStrictWrite());
+    }
+    else
+    {
+      $this->output_->writeMessageBegin('deletePedidoIC', TMessageType::CALL, $this->seqid_);
+      $args->write($this->output_);
+      $this->output_->writeMessageEnd();
+      $this->output_->getTransport()->flush();
+    }
+  }
+
+  public function recv_deletePedidoIC()
+  {
+    $bin_accel = ($this->input_ instanceof TBinaryProtocolAccelerated) && function_exists('thrift_protocol_read_binary');
+    if ($bin_accel) $result = thrift_protocol_read_binary($this->input_, '\Inventario_deletePedidoIC_result', $this->input_->isStrictRead());
+    else
+    {
+      $rseqid = 0;
+      $fname = null;
+      $mtype = 0;
+
+      $this->input_->readMessageBegin($fname, $mtype, $rseqid);
+      if ($mtype == TMessageType::EXCEPTION) {
+        $x = new TApplicationException();
+        $x->read($this->input_);
+        $this->input_->readMessageEnd();
+        throw $x;
+      }
+      $result = new \Inventario_deletePedidoIC_result();
+      $result->read($this->input_);
+      $this->input_->readMessageEnd();
+    }
+    if ($result->success !== null) {
+      return $result->success;
+    }
+    throw new \Exception("deletePedidoIC failed: unknown result");
+  }
+
 }
 
 
@@ -3284,15 +5546,15 @@ class Inventario_getAllItem_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size21 = 0;
-            $_etype24 = 0;
-            $xfer += $input->readListBegin($_etype24, $_size21);
-            for ($_i25 = 0; $_i25 < $_size21; ++$_i25)
+            $_size49 = 0;
+            $_etype52 = 0;
+            $xfer += $input->readListBegin($_etype52, $_size49);
+            for ($_i53 = 0; $_i53 < $_size49; ++$_i53)
             {
-              $elem26 = null;
-              $elem26 = new \Item();
-              $xfer += $elem26->read($input);
-              $this->success []= $elem26;
+              $elem54 = null;
+              $elem54 = new \Item();
+              $xfer += $elem54->read($input);
+              $this->success []= $elem54;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -3320,9 +5582,9 @@ class Inventario_getAllItem_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter27)
+          foreach ($this->success as $iter55)
           {
-            $xfer += $iter27->write($output);
+            $xfer += $iter55->write($output);
           }
         }
         $output->writeListEnd();
@@ -4421,15 +6683,15 @@ class Inventario_getAllGrupo_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size28 = 0;
-            $_etype31 = 0;
-            $xfer += $input->readListBegin($_etype31, $_size28);
-            for ($_i32 = 0; $_i32 < $_size28; ++$_i32)
+            $_size56 = 0;
+            $_etype59 = 0;
+            $xfer += $input->readListBegin($_etype59, $_size56);
+            for ($_i60 = 0; $_i60 < $_size56; ++$_i60)
             {
-              $elem33 = null;
-              $elem33 = new \Grupo();
-              $xfer += $elem33->read($input);
-              $this->success []= $elem33;
+              $elem61 = null;
+              $elem61 = new \Grupo();
+              $xfer += $elem61->read($input);
+              $this->success []= $elem61;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -4457,9 +6719,9 @@ class Inventario_getAllGrupo_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter34)
+          foreach ($this->success as $iter62)
           {
-            $xfer += $iter34->write($output);
+            $xfer += $iter62->write($output);
           }
         }
         $output->writeListEnd();
@@ -5558,15 +7820,15 @@ class Inventario_getAllCompuesto_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size35 = 0;
-            $_etype38 = 0;
-            $xfer += $input->readListBegin($_etype38, $_size35);
-            for ($_i39 = 0; $_i39 < $_size35; ++$_i39)
+            $_size63 = 0;
+            $_etype66 = 0;
+            $xfer += $input->readListBegin($_etype66, $_size63);
+            for ($_i67 = 0; $_i67 < $_size63; ++$_i67)
             {
-              $elem40 = null;
-              $elem40 = new \Compuesto();
-              $xfer += $elem40->read($input);
-              $this->success []= $elem40;
+              $elem68 = null;
+              $elem68 = new \Compuesto();
+              $xfer += $elem68->read($input);
+              $this->success []= $elem68;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -5594,9 +7856,9 @@ class Inventario_getAllCompuesto_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter41)
+          foreach ($this->success as $iter69)
           {
-            $xfer += $iter41->write($output);
+            $xfer += $iter69->write($output);
           }
         }
         $output->writeListEnd();
@@ -6695,15 +8957,15 @@ class Inventario_getAllCompuestoItem_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size42 = 0;
-            $_etype45 = 0;
-            $xfer += $input->readListBegin($_etype45, $_size42);
-            for ($_i46 = 0; $_i46 < $_size42; ++$_i46)
+            $_size70 = 0;
+            $_etype73 = 0;
+            $xfer += $input->readListBegin($_etype73, $_size70);
+            for ($_i74 = 0; $_i74 < $_size70; ++$_i74)
             {
-              $elem47 = null;
-              $elem47 = new \CompuestoItem();
-              $xfer += $elem47->read($input);
-              $this->success []= $elem47;
+              $elem75 = null;
+              $elem75 = new \CompuestoItem();
+              $xfer += $elem75->read($input);
+              $this->success []= $elem75;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -6731,9 +8993,9 @@ class Inventario_getAllCompuestoItem_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter48)
+          foreach ($this->success as $iter76)
           {
-            $xfer += $iter48->write($output);
+            $xfer += $iter76->write($output);
           }
         }
         $output->writeListEnd();
@@ -7832,15 +10094,15 @@ class Inventario_getAllPromocion_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size49 = 0;
-            $_etype52 = 0;
-            $xfer += $input->readListBegin($_etype52, $_size49);
-            for ($_i53 = 0; $_i53 < $_size49; ++$_i53)
+            $_size77 = 0;
+            $_etype80 = 0;
+            $xfer += $input->readListBegin($_etype80, $_size77);
+            for ($_i81 = 0; $_i81 < $_size77; ++$_i81)
             {
-              $elem54 = null;
-              $elem54 = new \Promocion();
-              $xfer += $elem54->read($input);
-              $this->success []= $elem54;
+              $elem82 = null;
+              $elem82 = new \Promocion();
+              $xfer += $elem82->read($input);
+              $this->success []= $elem82;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -7868,9 +10130,9 @@ class Inventario_getAllPromocion_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter55)
+          foreach ($this->success as $iter83)
           {
-            $xfer += $iter55->write($output);
+            $xfer += $iter83->write($output);
           }
         }
         $output->writeListEnd();
@@ -8969,15 +11231,15 @@ class Inventario_getAllIngreso_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size56 = 0;
-            $_etype59 = 0;
-            $xfer += $input->readListBegin($_etype59, $_size56);
-            for ($_i60 = 0; $_i60 < $_size56; ++$_i60)
+            $_size84 = 0;
+            $_etype87 = 0;
+            $xfer += $input->readListBegin($_etype87, $_size84);
+            for ($_i88 = 0; $_i88 < $_size84; ++$_i88)
             {
-              $elem61 = null;
-              $elem61 = new \Ingreso();
-              $xfer += $elem61->read($input);
-              $this->success []= $elem61;
+              $elem89 = null;
+              $elem89 = new \Ingreso();
+              $xfer += $elem89->read($input);
+              $this->success []= $elem89;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -9005,9 +11267,9 @@ class Inventario_getAllIngreso_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter62)
+          foreach ($this->success as $iter90)
           {
-            $xfer += $iter62->write($output);
+            $xfer += $iter90->write($output);
           }
         }
         $output->writeListEnd();
@@ -9927,15 +12189,15 @@ class Inventario_getAllOrdenCompra_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size63 = 0;
-            $_etype66 = 0;
-            $xfer += $input->readListBegin($_etype66, $_size63);
-            for ($_i67 = 0; $_i67 < $_size63; ++$_i67)
+            $_size91 = 0;
+            $_etype94 = 0;
+            $xfer += $input->readListBegin($_etype94, $_size91);
+            for ($_i95 = 0; $_i95 < $_size91; ++$_i95)
             {
-              $elem68 = null;
-              $elem68 = new \OrdenCompra();
-              $xfer += $elem68->read($input);
-              $this->success []= $elem68;
+              $elem96 = null;
+              $elem96 = new \OrdenCompra();
+              $xfer += $elem96->read($input);
+              $this->success []= $elem96;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -9963,9 +12225,9 @@ class Inventario_getAllOrdenCompra_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter69)
+          foreach ($this->success as $iter97)
           {
-            $xfer += $iter69->write($output);
+            $xfer += $iter97->write($output);
           }
         }
         $output->writeListEnd();
@@ -11616,15 +13878,15 @@ class Inventario_getAllProveedor_result {
         case 0:
           if ($ftype == TType::LST) {
             $this->success = array();
-            $_size70 = 0;
-            $_etype73 = 0;
-            $xfer += $input->readListBegin($_etype73, $_size70);
-            for ($_i74 = 0; $_i74 < $_size70; ++$_i74)
+            $_size98 = 0;
+            $_etype101 = 0;
+            $xfer += $input->readListBegin($_etype101, $_size98);
+            for ($_i102 = 0; $_i102 < $_size98; ++$_i102)
             {
-              $elem75 = null;
-              $elem75 = new \Proveedor();
-              $xfer += $elem75->read($input);
-              $this->success []= $elem75;
+              $elem103 = null;
+              $elem103 = new \Proveedor();
+              $xfer += $elem103->read($input);
+              $this->success []= $elem103;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -11652,9 +13914,9 @@ class Inventario_getAllProveedor_result {
       {
         $output->writeListBegin(TType::STRUCT, count($this->success));
         {
-          foreach ($this->success as $iter76)
+          foreach ($this->success as $iter104)
           {
-            $xfer += $iter76->write($output);
+            $xfer += $iter104->write($output);
           }
         }
         $output->writeListEnd();
@@ -12392,6 +14654,7479 @@ class Inventario_deleteProveedor_result {
   public function write($output) {
     $xfer = 0;
     $xfer += $output->writeStructBegin('Inventario_deleteProveedor_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getTarjeta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Tarjeta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Tarjeta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getTarjeta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Tarjeta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getTarjeta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getTarjeta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Tarjeta',
+      ),
+    );
+
+  /**
+   * @var \Tarjeta
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getTarjeta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \Tarjeta();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getTarjeta_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllTarjeta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Tarjeta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Tarjeta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllTarjeta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Tarjeta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllTarjeta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllTarjeta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\Tarjeta',
+        ),
+      ),
+    );
+
+  /**
+   * @var \Tarjeta[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllTarjeta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size105 = 0;
+            $_etype108 = 0;
+            $xfer += $input->readListBegin($_etype108, $_size105);
+            for ($_i109 = 0; $_i109 < $_size105; ++$_i109)
+            {
+              $elem110 = null;
+              $elem110 = new \Tarjeta();
+              $xfer += $elem110->read($input);
+              $this->success []= $elem110;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllTarjeta_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter111)
+          {
+            $xfer += $iter111->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getBanco_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Banco',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Banco
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getBanco_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Banco();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getBanco_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getBanco_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Banco',
+      ),
+    );
+
+  /**
+   * @var \Banco
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getBanco_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \Banco();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getBanco_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllBanco_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Banco',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Banco
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllBanco_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Banco();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllBanco_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllBanco_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\Banco',
+        ),
+      ),
+    );
+
+  /**
+   * @var \Banco[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllBanco_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size112 = 0;
+            $_etype115 = 0;
+            $xfer += $input->readListBegin($_etype115, $_size112);
+            for ($_i116 = 0; $_i116 < $_size112; ++$_i116)
+            {
+              $elem117 = null;
+              $elem117 = new \Banco();
+              $xfer += $elem117->read($input);
+              $this->success []= $elem117;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllBanco_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter118)
+          {
+            $xfer += $iter118->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getCompraTarjeta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\CompraTarjeta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \CompraTarjeta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getCompraTarjeta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \CompraTarjeta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getCompraTarjeta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getCompraTarjeta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\CompraTarjeta',
+      ),
+    );
+
+  /**
+   * @var \CompraTarjeta
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getCompraTarjeta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \CompraTarjeta();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getCompraTarjeta_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllCompraTarjeta_compra_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\CompraTarjeta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \CompraTarjeta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllCompraTarjeta_compra_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \CompraTarjeta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllCompraTarjeta_compra_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllCompraTarjeta_compra_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\CompraTarjeta',
+        ),
+      ),
+    );
+
+  /**
+   * @var \CompraTarjeta[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllCompraTarjeta_compra_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size119 = 0;
+            $_etype122 = 0;
+            $xfer += $input->readListBegin($_etype122, $_size119);
+            for ($_i123 = 0; $_i123 < $_size119; ++$_i123)
+            {
+              $elem124 = null;
+              $elem124 = new \CompraTarjeta();
+              $xfer += $elem124->read($input);
+              $this->success []= $elem124;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllCompraTarjeta_compra_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter125)
+          {
+            $xfer += $iter125->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deleteCompraTarjeta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\CompraTarjeta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \CompraTarjeta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deleteCompraTarjeta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \CompraTarjeta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deleteCompraTarjeta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deleteCompraTarjeta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deleteCompraTarjeta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deleteCompraTarjeta_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertCompraTarjeta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\CompraTarjeta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \CompraTarjeta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertCompraTarjeta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \CompraTarjeta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertCompraTarjeta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertCompraTarjeta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertCompraTarjeta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertCompraTarjeta_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getFacturacion_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Facturacion',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Facturacion
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getFacturacion_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Facturacion();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getFacturacion_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getFacturacion_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Facturacion',
+      ),
+    );
+
+  /**
+   * @var \Facturacion
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getFacturacion_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \Facturacion();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getFacturacion_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllFacturacion_usuario_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Facturacion',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Facturacion
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllFacturacion_usuario_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Facturacion();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllFacturacion_usuario_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllFacturacion_usuario_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\Facturacion',
+        ),
+      ),
+    );
+
+  /**
+   * @var \Facturacion[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllFacturacion_usuario_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size126 = 0;
+            $_etype129 = 0;
+            $xfer += $input->readListBegin($_etype129, $_size126);
+            for ($_i130 = 0; $_i130 < $_size126; ++$_i130)
+            {
+              $elem131 = null;
+              $elem131 = new \Facturacion();
+              $xfer += $elem131->read($input);
+              $this->success []= $elem131;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllFacturacion_usuario_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter132)
+          {
+            $xfer += $iter132->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateFacturacion_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Facturacion',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Facturacion
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateFacturacion_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Facturacion();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateFacturacion_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateFacturacion_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateFacturacion_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateFacturacion_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getCompra_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Compra',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Compra
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getCompra_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Compra();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getCompra_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getCompra_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Compra',
+      ),
+    );
+
+  /**
+   * @var \Compra
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getCompra_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \Compra();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getCompra_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllCompra_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Compra',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Compra
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllCompra_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Compra();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllCompra_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllCompra_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\Compra',
+        ),
+      ),
+    );
+
+  /**
+   * @var \Compra[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllCompra_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size133 = 0;
+            $_etype136 = 0;
+            $xfer += $input->readListBegin($_etype136, $_size133);
+            for ($_i137 = 0; $_i137 < $_size133; ++$_i137)
+            {
+              $elem138 = null;
+              $elem138 = new \Compra();
+              $xfer += $elem138->read($input);
+              $this->success []= $elem138;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllCompra_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter139)
+          {
+            $xfer += $iter139->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateCompra_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Compra',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Compra
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateCompra_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Compra();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateCompra_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateCompra_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateCompra_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateCompra_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertCompra_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Compra',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Compra
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertCompra_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Compra();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertCompra_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertCompra_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertCompra_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertCompra_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getPrecuenta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Precuenta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Precuenta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getPrecuenta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Precuenta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getPrecuenta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getPrecuenta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Precuenta',
+      ),
+    );
+
+  /**
+   * @var \Precuenta
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getPrecuenta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \Precuenta();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getPrecuenta_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllPrecuenta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Precuenta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Precuenta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllPrecuenta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Precuenta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllPrecuenta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllPrecuenta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\Precuenta',
+        ),
+      ),
+    );
+
+  /**
+   * @var \Precuenta[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllPrecuenta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size140 = 0;
+            $_etype143 = 0;
+            $xfer += $input->readListBegin($_etype143, $_size140);
+            for ($_i144 = 0; $_i144 < $_size140; ++$_i144)
+            {
+              $elem145 = null;
+              $elem145 = new \Precuenta();
+              $xfer += $elem145->read($input);
+              $this->success []= $elem145;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllPrecuenta_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter146)
+          {
+            $xfer += $iter146->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoPrecuenta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Precuenta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Precuenta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoPrecuenta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Precuenta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoPrecuenta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoPrecuenta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoPrecuenta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoPrecuenta_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updatePrecuenta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Precuenta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Precuenta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updatePrecuenta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Precuenta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updatePrecuenta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updatePrecuenta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updatePrecuenta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updatePrecuenta_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertPrecuenta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Precuenta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Precuenta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertPrecuenta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Precuenta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertPrecuenta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertPrecuenta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertPrecuenta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertPrecuenta_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deletePrecuenta_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Precuenta',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Precuenta
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deletePrecuenta_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Precuenta();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deletePrecuenta_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deletePrecuenta_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deletePrecuenta_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deletePrecuenta_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getReserva_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Reserva',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Reserva
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getReserva_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Reserva();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getReserva_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getReserva_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Reserva',
+      ),
+    );
+
+  /**
+   * @var \Reserva
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getReserva_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \Reserva();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getReserva_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllReserva_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Reserva',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Reserva
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllReserva_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Reserva();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllReserva_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllReserva_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\Reserva',
+        ),
+      ),
+    );
+
+  /**
+   * @var \Reserva[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllReserva_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size147 = 0;
+            $_etype150 = 0;
+            $xfer += $input->readListBegin($_etype150, $_size147);
+            for ($_i151 = 0; $_i151 < $_size147; ++$_i151)
+            {
+              $elem152 = null;
+              $elem152 = new \Reserva();
+              $xfer += $elem152->read($input);
+              $this->success []= $elem152;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllReserva_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter153)
+          {
+            $xfer += $iter153->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoReserva_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Reserva',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Reserva
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoReserva_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Reserva();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoReserva_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoReserva_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoReserva_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoReserva_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateReserva_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Reserva',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Reserva
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateReserva_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Reserva();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateReserva_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateReserva_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateReserva_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateReserva_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertReserva_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Reserva',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Reserva
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertReserva_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Reserva();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertReserva_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertReserva_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertReserva_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertReserva_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deleteReserva_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Reserva',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Reserva
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deleteReserva_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Reserva();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deleteReserva_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deleteReserva_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deleteReserva_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deleteReserva_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getPedido_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Pedido',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Pedido
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getPedido_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Pedido();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getPedido_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getPedido_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Pedido',
+      ),
+    );
+
+  /**
+   * @var \Pedido
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getPedido_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \Pedido();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getPedido_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllPedido_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Pedido',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Pedido
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllPedido_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Pedido();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllPedido_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllPedido_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\Pedido',
+        ),
+      ),
+    );
+
+  /**
+   * @var \Pedido[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllPedido_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size154 = 0;
+            $_etype157 = 0;
+            $xfer += $input->readListBegin($_etype157, $_size154);
+            for ($_i158 = 0; $_i158 < $_size154; ++$_i158)
+            {
+              $elem159 = null;
+              $elem159 = new \Pedido();
+              $xfer += $elem159->read($input);
+              $this->success []= $elem159;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllPedido_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter160)
+          {
+            $xfer += $iter160->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoPedido_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Pedido',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Pedido
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoPedido_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Pedido();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoPedido_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoPedido_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoPedido_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoPedido_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updatePedido_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Pedido',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Pedido
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updatePedido_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Pedido();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updatePedido_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updatePedido_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updatePedido_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updatePedido_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertPedido_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Pedido',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Pedido
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertPedido_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Pedido();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertPedido_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertPedido_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertPedido_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertPedido_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deletePedido_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Pedido',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \Pedido
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deletePedido_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \Pedido();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deletePedido_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deletePedido_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deletePedido_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deletePedido_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getPedidoIC_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\PedidoIC',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \PedidoIC
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getPedidoIC_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \PedidoIC();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getPedidoIC_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getPedidoIC_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\PedidoIC',
+      ),
+    );
+
+  /**
+   * @var \PedidoIC
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getPedidoIC_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRUCT) {
+            $this->success = new \PedidoIC();
+            $xfer += $this->success->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getPedidoIC_result');
+    if ($this->success !== null) {
+      if (!is_object($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::STRUCT, 0);
+      $xfer += $this->success->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllPedidoIC_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\PedidoIC',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \PedidoIC
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllPedidoIC_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \PedidoIC();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllPedidoIC_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_getAllPedidoIC_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\PedidoIC',
+        ),
+      ),
+    );
+
+  /**
+   * @var \PedidoIC[]
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_getAllPedidoIC_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::LST) {
+            $this->success = array();
+            $_size161 = 0;
+            $_etype164 = 0;
+            $xfer += $input->readListBegin($_etype164, $_size161);
+            for ($_i165 = 0; $_i165 < $_size161; ++$_i165)
+            {
+              $elem166 = null;
+              $elem166 = new \PedidoIC();
+              $xfer += $elem166->read($input);
+              $this->success []= $elem166;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_getAllPedidoIC_result');
+    if ($this->success !== null) {
+      if (!is_array($this->success)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('success', TType::LST, 0);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->success));
+        {
+          foreach ($this->success as $iter167)
+          {
+            $xfer += $iter167->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoPedidoIC_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\PedidoIC',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \PedidoIC
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoPedidoIC_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \PedidoIC();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoPedidoIC_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updateEstadoPedidoIC_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updateEstadoPedidoIC_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updateEstadoPedidoIC_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updatePedidoIC_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\PedidoIC',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \PedidoIC
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updatePedidoIC_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \PedidoIC();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updatePedidoIC_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_updatePedidoIC_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_updatePedidoIC_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_updatePedidoIC_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertPedidoIC_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\PedidoIC',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \PedidoIC
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertPedidoIC_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \PedidoIC();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertPedidoIC_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_insertPedidoIC_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_insertPedidoIC_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_insertPedidoIC_result');
+    if ($this->success !== null) {
+      $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
+      $xfer += $output->writeString($this->success);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deletePedidoIC_args {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'busqueda',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\Busqueda',
+      ),
+    2 => array(
+      'var' => 'objeto',
+      'isRequired' => false,
+      'type' => TType::STRUCT,
+      'class' => '\PedidoIC',
+      ),
+    );
+
+  /**
+   * @var \Busqueda
+   */
+  public $busqueda = null;
+  /**
+   * @var \PedidoIC
+   */
+  public $objeto = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['busqueda'])) {
+        $this->busqueda = $vals['busqueda'];
+      }
+      if (isset($vals['objeto'])) {
+        $this->objeto = $vals['objeto'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deletePedidoIC_args';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::STRUCT) {
+            $this->busqueda = new \Busqueda();
+            $xfer += $this->busqueda->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRUCT) {
+            $this->objeto = new \PedidoIC();
+            $xfer += $this->objeto->read($input);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deletePedidoIC_args');
+    if ($this->busqueda !== null) {
+      if (!is_object($this->busqueda)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('busqueda', TType::STRUCT, 1);
+      $xfer += $this->busqueda->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->objeto !== null) {
+      if (!is_object($this->objeto)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('objeto', TType::STRUCT, 2);
+      $xfer += $this->objeto->write($output);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Inventario_deletePedidoIC_result {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    0 => array(
+      'var' => 'success',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var string
+   */
+  public $success = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['success'])) {
+        $this->success = $vals['success'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Inventario_deletePedidoIC_result';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 0:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->success);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Inventario_deletePedidoIC_result');
     if ($this->success !== null) {
       $xfer += $output->writeFieldBegin('success', TType::STRING, 0);
       $xfer += $output->writeString($this->success);

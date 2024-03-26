@@ -3506,6 +3506,4057 @@ class Proveedor {
 
 }
 
+class Tarjeta {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_tarjeta',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'nombre',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    3 => array(
+      'var' => 'tipo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    4 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    5 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    6 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    7 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    8 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_tarjeta = null;
+  /**
+   * @var string
+   */
+  public $nombre = null;
+  /**
+   * @var string
+   */
+  public $tipo = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_tarjeta'])) {
+        $this->id_tarjeta = $vals['id_tarjeta'];
+      }
+      if (isset($vals['nombre'])) {
+        $this->nombre = $vals['nombre'];
+      }
+      if (isset($vals['tipo'])) {
+        $this->tipo = $vals['tipo'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Tarjeta';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_tarjeta);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nombre);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Tarjeta');
+    if ($this->id_tarjeta !== null) {
+      $xfer += $output->writeFieldBegin('id_tarjeta', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_tarjeta);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nombre !== null) {
+      $xfer += $output->writeFieldBegin('nombre', TType::STRING, 2);
+      $xfer += $output->writeString($this->nombre);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo !== null) {
+      $xfer += $output->writeFieldBegin('tipo', TType::STRING, 3);
+      $xfer += $output->writeString($this->tipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 4);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 5);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 6);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 7);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 8);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Banco {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_banco',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'nombre',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    3 => array(
+      'var' => 'tipo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    4 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    5 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    6 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    7 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    8 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_banco = null;
+  /**
+   * @var string
+   */
+  public $nombre = null;
+  /**
+   * @var string
+   */
+  public $tipo = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_banco'])) {
+        $this->id_banco = $vals['id_banco'];
+      }
+      if (isset($vals['nombre'])) {
+        $this->nombre = $vals['nombre'];
+      }
+      if (isset($vals['tipo'])) {
+        $this->tipo = $vals['tipo'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Banco';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_banco);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nombre);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Banco');
+    if ($this->id_banco !== null) {
+      $xfer += $output->writeFieldBegin('id_banco', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_banco);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nombre !== null) {
+      $xfer += $output->writeFieldBegin('nombre', TType::STRING, 2);
+      $xfer += $output->writeString($this->nombre);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo !== null) {
+      $xfer += $output->writeFieldBegin('tipo', TType::STRING, 3);
+      $xfer += $output->writeString($this->tipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 4);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 5);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 6);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 7);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 8);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class CompraTarjeta {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_compra_tajeta',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'id_precuenta_general_pago',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    3 => array(
+      'var' => 'id_precuenta_general',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    4 => array(
+      'var' => 'id_compra',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    5 => array(
+      'var' => 'id_tarjeta',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    6 => array(
+      'var' => 'id_banco',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    7 => array(
+      'var' => 'tarjeta',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    8 => array(
+      'var' => 'banco',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    9 => array(
+      'var' => 'tipo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    10 => array(
+      'var' => 'tipo_pago',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    11 => array(
+      'var' => 'lote',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    12 => array(
+      'var' => 'referencia',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    13 => array(
+      'var' => 'total',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    14 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    15 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    16 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    17 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    18 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_compra_tajeta = null;
+  /**
+   * @var int
+   */
+  public $id_precuenta_general_pago = null;
+  /**
+   * @var int
+   */
+  public $id_precuenta_general = null;
+  /**
+   * @var int
+   */
+  public $id_compra = null;
+  /**
+   * @var int
+   */
+  public $id_tarjeta = null;
+  /**
+   * @var int
+   */
+  public $id_banco = null;
+  /**
+   * @var string
+   */
+  public $tarjeta = null;
+  /**
+   * @var string
+   */
+  public $banco = null;
+  /**
+   * @var string
+   */
+  public $tipo = null;
+  /**
+   * @var string
+   */
+  public $tipo_pago = null;
+  /**
+   * @var string
+   */
+  public $lote = null;
+  /**
+   * @var string
+   */
+  public $referencia = null;
+  /**
+   * @var string
+   */
+  public $total = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_compra_tajeta'])) {
+        $this->id_compra_tajeta = $vals['id_compra_tajeta'];
+      }
+      if (isset($vals['id_precuenta_general_pago'])) {
+        $this->id_precuenta_general_pago = $vals['id_precuenta_general_pago'];
+      }
+      if (isset($vals['id_precuenta_general'])) {
+        $this->id_precuenta_general = $vals['id_precuenta_general'];
+      }
+      if (isset($vals['id_compra'])) {
+        $this->id_compra = $vals['id_compra'];
+      }
+      if (isset($vals['id_tarjeta'])) {
+        $this->id_tarjeta = $vals['id_tarjeta'];
+      }
+      if (isset($vals['id_banco'])) {
+        $this->id_banco = $vals['id_banco'];
+      }
+      if (isset($vals['tarjeta'])) {
+        $this->tarjeta = $vals['tarjeta'];
+      }
+      if (isset($vals['banco'])) {
+        $this->banco = $vals['banco'];
+      }
+      if (isset($vals['tipo'])) {
+        $this->tipo = $vals['tipo'];
+      }
+      if (isset($vals['tipo_pago'])) {
+        $this->tipo_pago = $vals['tipo_pago'];
+      }
+      if (isset($vals['lote'])) {
+        $this->lote = $vals['lote'];
+      }
+      if (isset($vals['referencia'])) {
+        $this->referencia = $vals['referencia'];
+      }
+      if (isset($vals['total'])) {
+        $this->total = $vals['total'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'CompraTarjeta';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_compra_tajeta);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_precuenta_general_pago);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_precuenta_general);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_compra);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_tarjeta);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_banco);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tarjeta);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->banco);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo_pago);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->lote);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->referencia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->total);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('CompraTarjeta');
+    if ($this->id_compra_tajeta !== null) {
+      $xfer += $output->writeFieldBegin('id_compra_tajeta', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_compra_tajeta);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_precuenta_general_pago !== null) {
+      $xfer += $output->writeFieldBegin('id_precuenta_general_pago', TType::I32, 2);
+      $xfer += $output->writeI32($this->id_precuenta_general_pago);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_precuenta_general !== null) {
+      $xfer += $output->writeFieldBegin('id_precuenta_general', TType::I32, 3);
+      $xfer += $output->writeI32($this->id_precuenta_general);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_compra !== null) {
+      $xfer += $output->writeFieldBegin('id_compra', TType::I32, 4);
+      $xfer += $output->writeI32($this->id_compra);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_tarjeta !== null) {
+      $xfer += $output->writeFieldBegin('id_tarjeta', TType::I32, 5);
+      $xfer += $output->writeI32($this->id_tarjeta);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_banco !== null) {
+      $xfer += $output->writeFieldBegin('id_banco', TType::I32, 6);
+      $xfer += $output->writeI32($this->id_banco);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tarjeta !== null) {
+      $xfer += $output->writeFieldBegin('tarjeta', TType::STRING, 7);
+      $xfer += $output->writeString($this->tarjeta);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->banco !== null) {
+      $xfer += $output->writeFieldBegin('banco', TType::STRING, 8);
+      $xfer += $output->writeString($this->banco);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo !== null) {
+      $xfer += $output->writeFieldBegin('tipo', TType::STRING, 9);
+      $xfer += $output->writeString($this->tipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo_pago !== null) {
+      $xfer += $output->writeFieldBegin('tipo_pago', TType::STRING, 10);
+      $xfer += $output->writeString($this->tipo_pago);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->lote !== null) {
+      $xfer += $output->writeFieldBegin('lote', TType::STRING, 11);
+      $xfer += $output->writeString($this->lote);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->referencia !== null) {
+      $xfer += $output->writeFieldBegin('referencia', TType::STRING, 12);
+      $xfer += $output->writeString($this->referencia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total !== null) {
+      $xfer += $output->writeFieldBegin('total', TType::STRING, 13);
+      $xfer += $output->writeString($this->total);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 14);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 15);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 16);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 17);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 18);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Facturacion {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_facturacion',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'id_compra',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    3 => array(
+      'var' => 'id_usuario_cliente',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    4 => array(
+      'var' => 'nombres',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    5 => array(
+      'var' => 'apellidos',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    6 => array(
+      'var' => 'cedula',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    7 => array(
+      'var' => 'celular',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    8 => array(
+      'var' => 'razon_social',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    9 => array(
+      'var' => 'ruc',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    10 => array(
+      'var' => 'tipo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    11 => array(
+      'var' => 'direccion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    12 => array(
+      'var' => 'correo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    13 => array(
+      'var' => 'factura',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    14 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    15 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    16 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    17 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    18 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_facturacion = null;
+  /**
+   * @var int
+   */
+  public $id_compra = null;
+  /**
+   * @var int
+   */
+  public $id_usuario_cliente = null;
+  /**
+   * @var string
+   */
+  public $nombres = null;
+  /**
+   * @var string
+   */
+  public $apellidos = null;
+  /**
+   * @var string
+   */
+  public $cedula = null;
+  /**
+   * @var string
+   */
+  public $celular = null;
+  /**
+   * @var string
+   */
+  public $razon_social = null;
+  /**
+   * @var string
+   */
+  public $ruc = null;
+  /**
+   * @var string
+   */
+  public $tipo = null;
+  /**
+   * @var string
+   */
+  public $direccion = null;
+  /**
+   * @var string
+   */
+  public $correo = null;
+  /**
+   * @var string
+   */
+  public $factura = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_facturacion'])) {
+        $this->id_facturacion = $vals['id_facturacion'];
+      }
+      if (isset($vals['id_compra'])) {
+        $this->id_compra = $vals['id_compra'];
+      }
+      if (isset($vals['id_usuario_cliente'])) {
+        $this->id_usuario_cliente = $vals['id_usuario_cliente'];
+      }
+      if (isset($vals['nombres'])) {
+        $this->nombres = $vals['nombres'];
+      }
+      if (isset($vals['apellidos'])) {
+        $this->apellidos = $vals['apellidos'];
+      }
+      if (isset($vals['cedula'])) {
+        $this->cedula = $vals['cedula'];
+      }
+      if (isset($vals['celular'])) {
+        $this->celular = $vals['celular'];
+      }
+      if (isset($vals['razon_social'])) {
+        $this->razon_social = $vals['razon_social'];
+      }
+      if (isset($vals['ruc'])) {
+        $this->ruc = $vals['ruc'];
+      }
+      if (isset($vals['tipo'])) {
+        $this->tipo = $vals['tipo'];
+      }
+      if (isset($vals['direccion'])) {
+        $this->direccion = $vals['direccion'];
+      }
+      if (isset($vals['correo'])) {
+        $this->correo = $vals['correo'];
+      }
+      if (isset($vals['factura'])) {
+        $this->factura = $vals['factura'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Facturacion';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_facturacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_compra);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_usuario_cliente);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nombres);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->apellidos);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->cedula);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->celular);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->razon_social);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->ruc);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->direccion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->correo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->factura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Facturacion');
+    if ($this->id_facturacion !== null) {
+      $xfer += $output->writeFieldBegin('id_facturacion', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_facturacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_compra !== null) {
+      $xfer += $output->writeFieldBegin('id_compra', TType::I32, 2);
+      $xfer += $output->writeI32($this->id_compra);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_usuario_cliente !== null) {
+      $xfer += $output->writeFieldBegin('id_usuario_cliente', TType::I32, 3);
+      $xfer += $output->writeI32($this->id_usuario_cliente);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nombres !== null) {
+      $xfer += $output->writeFieldBegin('nombres', TType::STRING, 4);
+      $xfer += $output->writeString($this->nombres);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->apellidos !== null) {
+      $xfer += $output->writeFieldBegin('apellidos', TType::STRING, 5);
+      $xfer += $output->writeString($this->apellidos);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cedula !== null) {
+      $xfer += $output->writeFieldBegin('cedula', TType::STRING, 6);
+      $xfer += $output->writeString($this->cedula);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->celular !== null) {
+      $xfer += $output->writeFieldBegin('celular', TType::STRING, 7);
+      $xfer += $output->writeString($this->celular);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->razon_social !== null) {
+      $xfer += $output->writeFieldBegin('razon_social', TType::STRING, 8);
+      $xfer += $output->writeString($this->razon_social);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->ruc !== null) {
+      $xfer += $output->writeFieldBegin('ruc', TType::STRING, 9);
+      $xfer += $output->writeString($this->ruc);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo !== null) {
+      $xfer += $output->writeFieldBegin('tipo', TType::STRING, 10);
+      $xfer += $output->writeString($this->tipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->direccion !== null) {
+      $xfer += $output->writeFieldBegin('direccion', TType::STRING, 11);
+      $xfer += $output->writeString($this->direccion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->correo !== null) {
+      $xfer += $output->writeFieldBegin('correo', TType::STRING, 12);
+      $xfer += $output->writeString($this->correo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->factura !== null) {
+      $xfer += $output->writeFieldBegin('factura', TType::STRING, 13);
+      $xfer += $output->writeString($this->factura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 14);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 15);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 16);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 17);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 18);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Compra {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_compra',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'id_usuario_cliente',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    3 => array(
+      'var' => 'id_facturacion',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    4 => array(
+      'var' => 'id_precuenta_general',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    5 => array(
+      'var' => 'subtotal',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    6 => array(
+      'var' => 'donacion',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    7 => array(
+      'var' => 'dolares_canjeados',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    8 => array(
+      'var' => 'descuento',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    9 => array(
+      'var' => 'iva',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    10 => array(
+      'var' => 'total',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    11 => array(
+      'var' => 'factura',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    12 => array(
+      'var' => 'nota_credito',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    13 => array(
+      'var' => 'email',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    14 => array(
+      'var' => 'id_transacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    15 => array(
+      'var' => 'authorization_code',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    16 => array(
+      'var' => 'status_transacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    17 => array(
+      'var' => 'tipo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    18 => array(
+      'var' => 'devolucion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    19 => array(
+      'var' => 'status_factura',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    20 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    21 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    22 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    23 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    24 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_compra = null;
+  /**
+   * @var int
+   */
+  public $id_usuario_cliente = null;
+  /**
+   * @var int
+   */
+  public $id_facturacion = null;
+  /**
+   * @var int
+   */
+  public $id_precuenta_general = null;
+  /**
+   * @var double
+   */
+  public $subtotal = null;
+  /**
+   * @var double
+   */
+  public $donacion = null;
+  /**
+   * @var double
+   */
+  public $dolares_canjeados = null;
+  /**
+   * @var double
+   */
+  public $descuento = null;
+  /**
+   * @var double
+   */
+  public $iva = null;
+  /**
+   * @var double
+   */
+  public $total = null;
+  /**
+   * @var string
+   */
+  public $factura = null;
+  /**
+   * @var string
+   */
+  public $nota_credito = null;
+  /**
+   * @var string
+   */
+  public $email = null;
+  /**
+   * @var string
+   */
+  public $id_transacion = null;
+  /**
+   * @var string
+   */
+  public $authorization_code = null;
+  /**
+   * @var string
+   */
+  public $status_transacion = null;
+  /**
+   * @var string
+   */
+  public $tipo = null;
+  /**
+   * @var string
+   */
+  public $devolucion = null;
+  /**
+   * @var string
+   */
+  public $status_factura = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_compra'])) {
+        $this->id_compra = $vals['id_compra'];
+      }
+      if (isset($vals['id_usuario_cliente'])) {
+        $this->id_usuario_cliente = $vals['id_usuario_cliente'];
+      }
+      if (isset($vals['id_facturacion'])) {
+        $this->id_facturacion = $vals['id_facturacion'];
+      }
+      if (isset($vals['id_precuenta_general'])) {
+        $this->id_precuenta_general = $vals['id_precuenta_general'];
+      }
+      if (isset($vals['subtotal'])) {
+        $this->subtotal = $vals['subtotal'];
+      }
+      if (isset($vals['donacion'])) {
+        $this->donacion = $vals['donacion'];
+      }
+      if (isset($vals['dolares_canjeados'])) {
+        $this->dolares_canjeados = $vals['dolares_canjeados'];
+      }
+      if (isset($vals['descuento'])) {
+        $this->descuento = $vals['descuento'];
+      }
+      if (isset($vals['iva'])) {
+        $this->iva = $vals['iva'];
+      }
+      if (isset($vals['total'])) {
+        $this->total = $vals['total'];
+      }
+      if (isset($vals['factura'])) {
+        $this->factura = $vals['factura'];
+      }
+      if (isset($vals['nota_credito'])) {
+        $this->nota_credito = $vals['nota_credito'];
+      }
+      if (isset($vals['email'])) {
+        $this->email = $vals['email'];
+      }
+      if (isset($vals['id_transacion'])) {
+        $this->id_transacion = $vals['id_transacion'];
+      }
+      if (isset($vals['authorization_code'])) {
+        $this->authorization_code = $vals['authorization_code'];
+      }
+      if (isset($vals['status_transacion'])) {
+        $this->status_transacion = $vals['status_transacion'];
+      }
+      if (isset($vals['tipo'])) {
+        $this->tipo = $vals['tipo'];
+      }
+      if (isset($vals['devolucion'])) {
+        $this->devolucion = $vals['devolucion'];
+      }
+      if (isset($vals['status_factura'])) {
+        $this->status_factura = $vals['status_factura'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Compra';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_compra);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_usuario_cliente);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_facturacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_precuenta_general);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->subtotal);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->donacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->dolares_canjeados);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->descuento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->iva);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->total);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->factura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nota_credito);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->email);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->id_transacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->authorization_code);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->status_transacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->devolucion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 19:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->status_factura);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 20:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 21:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 22:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 23:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 24:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Compra');
+    if ($this->id_compra !== null) {
+      $xfer += $output->writeFieldBegin('id_compra', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_compra);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_usuario_cliente !== null) {
+      $xfer += $output->writeFieldBegin('id_usuario_cliente', TType::I32, 2);
+      $xfer += $output->writeI32($this->id_usuario_cliente);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_facturacion !== null) {
+      $xfer += $output->writeFieldBegin('id_facturacion', TType::I32, 3);
+      $xfer += $output->writeI32($this->id_facturacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_precuenta_general !== null) {
+      $xfer += $output->writeFieldBegin('id_precuenta_general', TType::I32, 4);
+      $xfer += $output->writeI32($this->id_precuenta_general);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->subtotal !== null) {
+      $xfer += $output->writeFieldBegin('subtotal', TType::DOUBLE, 5);
+      $xfer += $output->writeDouble($this->subtotal);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->donacion !== null) {
+      $xfer += $output->writeFieldBegin('donacion', TType::DOUBLE, 6);
+      $xfer += $output->writeDouble($this->donacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->dolares_canjeados !== null) {
+      $xfer += $output->writeFieldBegin('dolares_canjeados', TType::DOUBLE, 7);
+      $xfer += $output->writeDouble($this->dolares_canjeados);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descuento !== null) {
+      $xfer += $output->writeFieldBegin('descuento', TType::DOUBLE, 8);
+      $xfer += $output->writeDouble($this->descuento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->iva !== null) {
+      $xfer += $output->writeFieldBegin('iva', TType::DOUBLE, 9);
+      $xfer += $output->writeDouble($this->iva);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total !== null) {
+      $xfer += $output->writeFieldBegin('total', TType::DOUBLE, 10);
+      $xfer += $output->writeDouble($this->total);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->factura !== null) {
+      $xfer += $output->writeFieldBegin('factura', TType::STRING, 11);
+      $xfer += $output->writeString($this->factura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nota_credito !== null) {
+      $xfer += $output->writeFieldBegin('nota_credito', TType::STRING, 12);
+      $xfer += $output->writeString($this->nota_credito);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->email !== null) {
+      $xfer += $output->writeFieldBegin('email', TType::STRING, 13);
+      $xfer += $output->writeString($this->email);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_transacion !== null) {
+      $xfer += $output->writeFieldBegin('id_transacion', TType::STRING, 14);
+      $xfer += $output->writeString($this->id_transacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->authorization_code !== null) {
+      $xfer += $output->writeFieldBegin('authorization_code', TType::STRING, 15);
+      $xfer += $output->writeString($this->authorization_code);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->status_transacion !== null) {
+      $xfer += $output->writeFieldBegin('status_transacion', TType::STRING, 16);
+      $xfer += $output->writeString($this->status_transacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo !== null) {
+      $xfer += $output->writeFieldBegin('tipo', TType::STRING, 17);
+      $xfer += $output->writeString($this->tipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->devolucion !== null) {
+      $xfer += $output->writeFieldBegin('devolucion', TType::STRING, 18);
+      $xfer += $output->writeString($this->devolucion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->status_factura !== null) {
+      $xfer += $output->writeFieldBegin('status_factura', TType::STRING, 19);
+      $xfer += $output->writeString($this->status_factura);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 20);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 21);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 22);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 23);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 24);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Precuenta {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_precuenta',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'id_reserva',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    3 => array(
+      'var' => 'id_compra',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    4 => array(
+      'var' => 'descripcion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    5 => array(
+      'var' => 'total_pagado',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    6 => array(
+      'var' => 'cambio',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    7 => array(
+      'var' => 'efectivo',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    8 => array(
+      'var' => 'tarjeta_credito',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    9 => array(
+      'var' => 'donacion',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    10 => array(
+      'var' => 'descuento',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    11 => array(
+      'var' => 'total',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    12 => array(
+      'var' => 'canjeados',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    13 => array(
+      'var' => 'items',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\PedidoIC',
+        ),
+      ),
+    14 => array(
+      'var' => 'compuestos',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\PedidoIC',
+        ),
+      ),
+    15 => array(
+      'var' => 'tipo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    16 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    17 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    18 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    19 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    20 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_precuenta = null;
+  /**
+   * @var int
+   */
+  public $id_reserva = null;
+  /**
+   * @var int
+   */
+  public $id_compra = null;
+  /**
+   * @var string
+   */
+  public $descripcion = null;
+  /**
+   * @var double
+   */
+  public $total_pagado = null;
+  /**
+   * @var double
+   */
+  public $cambio = null;
+  /**
+   * @var double
+   */
+  public $efectivo = null;
+  /**
+   * @var double
+   */
+  public $tarjeta_credito = null;
+  /**
+   * @var double
+   */
+  public $donacion = null;
+  /**
+   * @var double
+   */
+  public $descuento = null;
+  /**
+   * @var double
+   */
+  public $total = null;
+  /**
+   * @var double
+   */
+  public $canjeados = null;
+  /**
+   * @var \PedidoIC[]
+   */
+  public $items = null;
+  /**
+   * @var \PedidoIC[]
+   */
+  public $compuestos = null;
+  /**
+   * @var string
+   */
+  public $tipo = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_precuenta'])) {
+        $this->id_precuenta = $vals['id_precuenta'];
+      }
+      if (isset($vals['id_reserva'])) {
+        $this->id_reserva = $vals['id_reserva'];
+      }
+      if (isset($vals['id_compra'])) {
+        $this->id_compra = $vals['id_compra'];
+      }
+      if (isset($vals['descripcion'])) {
+        $this->descripcion = $vals['descripcion'];
+      }
+      if (isset($vals['total_pagado'])) {
+        $this->total_pagado = $vals['total_pagado'];
+      }
+      if (isset($vals['cambio'])) {
+        $this->cambio = $vals['cambio'];
+      }
+      if (isset($vals['efectivo'])) {
+        $this->efectivo = $vals['efectivo'];
+      }
+      if (isset($vals['tarjeta_credito'])) {
+        $this->tarjeta_credito = $vals['tarjeta_credito'];
+      }
+      if (isset($vals['donacion'])) {
+        $this->donacion = $vals['donacion'];
+      }
+      if (isset($vals['descuento'])) {
+        $this->descuento = $vals['descuento'];
+      }
+      if (isset($vals['total'])) {
+        $this->total = $vals['total'];
+      }
+      if (isset($vals['canjeados'])) {
+        $this->canjeados = $vals['canjeados'];
+      }
+      if (isset($vals['items'])) {
+        $this->items = $vals['items'];
+      }
+      if (isset($vals['compuestos'])) {
+        $this->compuestos = $vals['compuestos'];
+      }
+      if (isset($vals['tipo'])) {
+        $this->tipo = $vals['tipo'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Precuenta';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_precuenta);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_reserva);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_compra);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->descripcion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->total_pagado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->cambio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->efectivo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->tarjeta_credito);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->donacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->descuento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->total);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->canjeados);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::LST) {
+            $this->items = array();
+            $_size14 = 0;
+            $_etype17 = 0;
+            $xfer += $input->readListBegin($_etype17, $_size14);
+            for ($_i18 = 0; $_i18 < $_size14; ++$_i18)
+            {
+              $elem19 = null;
+              $elem19 = new \PedidoIC();
+              $xfer += $elem19->read($input);
+              $this->items []= $elem19;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::LST) {
+            $this->compuestos = array();
+            $_size20 = 0;
+            $_etype23 = 0;
+            $xfer += $input->readListBegin($_etype23, $_size20);
+            for ($_i24 = 0; $_i24 < $_size20; ++$_i24)
+            {
+              $elem25 = null;
+              $elem25 = new \PedidoIC();
+              $xfer += $elem25->read($input);
+              $this->compuestos []= $elem25;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 19:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 20:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Precuenta');
+    if ($this->id_precuenta !== null) {
+      $xfer += $output->writeFieldBegin('id_precuenta', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_precuenta);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_reserva !== null) {
+      $xfer += $output->writeFieldBegin('id_reserva', TType::I32, 2);
+      $xfer += $output->writeI32($this->id_reserva);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_compra !== null) {
+      $xfer += $output->writeFieldBegin('id_compra', TType::I32, 3);
+      $xfer += $output->writeI32($this->id_compra);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descripcion !== null) {
+      $xfer += $output->writeFieldBegin('descripcion', TType::STRING, 4);
+      $xfer += $output->writeString($this->descripcion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total_pagado !== null) {
+      $xfer += $output->writeFieldBegin('total_pagado', TType::DOUBLE, 5);
+      $xfer += $output->writeDouble($this->total_pagado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cambio !== null) {
+      $xfer += $output->writeFieldBegin('cambio', TType::DOUBLE, 6);
+      $xfer += $output->writeDouble($this->cambio);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->efectivo !== null) {
+      $xfer += $output->writeFieldBegin('efectivo', TType::DOUBLE, 7);
+      $xfer += $output->writeDouble($this->efectivo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tarjeta_credito !== null) {
+      $xfer += $output->writeFieldBegin('tarjeta_credito', TType::DOUBLE, 8);
+      $xfer += $output->writeDouble($this->tarjeta_credito);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->donacion !== null) {
+      $xfer += $output->writeFieldBegin('donacion', TType::DOUBLE, 9);
+      $xfer += $output->writeDouble($this->donacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descuento !== null) {
+      $xfer += $output->writeFieldBegin('descuento', TType::DOUBLE, 10);
+      $xfer += $output->writeDouble($this->descuento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total !== null) {
+      $xfer += $output->writeFieldBegin('total', TType::DOUBLE, 11);
+      $xfer += $output->writeDouble($this->total);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->canjeados !== null) {
+      $xfer += $output->writeFieldBegin('canjeados', TType::DOUBLE, 12);
+      $xfer += $output->writeDouble($this->canjeados);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->items !== null) {
+      if (!is_array($this->items)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('items', TType::LST, 13);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->items));
+        {
+          foreach ($this->items as $iter26)
+          {
+            $xfer += $iter26->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->compuestos !== null) {
+      if (!is_array($this->compuestos)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('compuestos', TType::LST, 14);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->compuestos));
+        {
+          foreach ($this->compuestos as $iter27)
+          {
+            $xfer += $iter27->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo !== null) {
+      $xfer += $output->writeFieldBegin('tipo', TType::STRING, 15);
+      $xfer += $output->writeString($this->tipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 16);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 17);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 18);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 19);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 20);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Reserva {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_reserva',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'id_mesa',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    3 => array(
+      'var' => 'nombre_mesa',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    4 => array(
+      'var' => 'descripcion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    5 => array(
+      'var' => 'total',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    6 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    7 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    8 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    9 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    10 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_reserva = null;
+  /**
+   * @var int
+   */
+  public $id_mesa = null;
+  /**
+   * @var string
+   */
+  public $nombre_mesa = null;
+  /**
+   * @var string
+   */
+  public $descripcion = null;
+  /**
+   * @var double
+   */
+  public $total = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_reserva'])) {
+        $this->id_reserva = $vals['id_reserva'];
+      }
+      if (isset($vals['id_mesa'])) {
+        $this->id_mesa = $vals['id_mesa'];
+      }
+      if (isset($vals['nombre_mesa'])) {
+        $this->nombre_mesa = $vals['nombre_mesa'];
+      }
+      if (isset($vals['descripcion'])) {
+        $this->descripcion = $vals['descripcion'];
+      }
+      if (isset($vals['total'])) {
+        $this->total = $vals['total'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Reserva';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_reserva);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_mesa);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nombre_mesa);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->descripcion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->total);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Reserva');
+    if ($this->id_reserva !== null) {
+      $xfer += $output->writeFieldBegin('id_reserva', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_reserva);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_mesa !== null) {
+      $xfer += $output->writeFieldBegin('id_mesa', TType::I32, 2);
+      $xfer += $output->writeI32($this->id_mesa);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nombre_mesa !== null) {
+      $xfer += $output->writeFieldBegin('nombre_mesa', TType::STRING, 3);
+      $xfer += $output->writeString($this->nombre_mesa);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descripcion !== null) {
+      $xfer += $output->writeFieldBegin('descripcion', TType::STRING, 4);
+      $xfer += $output->writeString($this->descripcion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total !== null) {
+      $xfer += $output->writeFieldBegin('total', TType::DOUBLE, 5);
+      $xfer += $output->writeDouble($this->total);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 6);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 7);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 8);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 9);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 10);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Pedido {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_pedido',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'id_reserva',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    3 => array(
+      'var' => 'mensaje_cocina',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    4 => array(
+      'var' => 'mensaje_bar',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    5 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    6 => array(
+      'var' => 'descripcion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    7 => array(
+      'var' => 'total_pagado',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    8 => array(
+      'var' => 'cambio',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    9 => array(
+      'var' => 'efectivo',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    10 => array(
+      'var' => 'tarjeta_credito',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    11 => array(
+      'var' => 'donacion',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    12 => array(
+      'var' => 'descuento',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    13 => array(
+      'var' => 'total',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    14 => array(
+      'var' => 'canjeados',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    15 => array(
+      'var' => 'items',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\PedidoIC',
+        ),
+      ),
+    16 => array(
+      'var' => 'compuestos',
+      'isRequired' => false,
+      'type' => TType::LST,
+      'etype' => TType::STRUCT,
+      'elem' => array(
+        'type' => TType::STRUCT,
+        'class' => '\PedidoIC',
+        ),
+      ),
+    17 => array(
+      'var' => 'estado_impresion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    18 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    19 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    20 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    21 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_pedido = null;
+  /**
+   * @var int
+   */
+  public $id_reserva = null;
+  /**
+   * @var string
+   */
+  public $mensaje_cocina = null;
+  /**
+   * @var string
+   */
+  public $mensaje_bar = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $descripcion = null;
+  /**
+   * @var double
+   */
+  public $total_pagado = null;
+  /**
+   * @var double
+   */
+  public $cambio = null;
+  /**
+   * @var double
+   */
+  public $efectivo = null;
+  /**
+   * @var double
+   */
+  public $tarjeta_credito = null;
+  /**
+   * @var double
+   */
+  public $donacion = null;
+  /**
+   * @var double
+   */
+  public $descuento = null;
+  /**
+   * @var double
+   */
+  public $total = null;
+  /**
+   * @var double
+   */
+  public $canjeados = null;
+  /**
+   * @var \PedidoIC[]
+   */
+  public $items = null;
+  /**
+   * @var \PedidoIC[]
+   */
+  public $compuestos = null;
+  /**
+   * @var string
+   */
+  public $estado_impresion = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_pedido'])) {
+        $this->id_pedido = $vals['id_pedido'];
+      }
+      if (isset($vals['id_reserva'])) {
+        $this->id_reserva = $vals['id_reserva'];
+      }
+      if (isset($vals['mensaje_cocina'])) {
+        $this->mensaje_cocina = $vals['mensaje_cocina'];
+      }
+      if (isset($vals['mensaje_bar'])) {
+        $this->mensaje_bar = $vals['mensaje_bar'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['descripcion'])) {
+        $this->descripcion = $vals['descripcion'];
+      }
+      if (isset($vals['total_pagado'])) {
+        $this->total_pagado = $vals['total_pagado'];
+      }
+      if (isset($vals['cambio'])) {
+        $this->cambio = $vals['cambio'];
+      }
+      if (isset($vals['efectivo'])) {
+        $this->efectivo = $vals['efectivo'];
+      }
+      if (isset($vals['tarjeta_credito'])) {
+        $this->tarjeta_credito = $vals['tarjeta_credito'];
+      }
+      if (isset($vals['donacion'])) {
+        $this->donacion = $vals['donacion'];
+      }
+      if (isset($vals['descuento'])) {
+        $this->descuento = $vals['descuento'];
+      }
+      if (isset($vals['total'])) {
+        $this->total = $vals['total'];
+      }
+      if (isset($vals['canjeados'])) {
+        $this->canjeados = $vals['canjeados'];
+      }
+      if (isset($vals['items'])) {
+        $this->items = $vals['items'];
+      }
+      if (isset($vals['compuestos'])) {
+        $this->compuestos = $vals['compuestos'];
+      }
+      if (isset($vals['estado_impresion'])) {
+        $this->estado_impresion = $vals['estado_impresion'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Pedido';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_pedido);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_reserva);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->mensaje_cocina);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->mensaje_bar);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->descripcion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->total_pagado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->cambio);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->efectivo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->tarjeta_credito);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->donacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->descuento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->total);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->canjeados);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::LST) {
+            $this->items = array();
+            $_size28 = 0;
+            $_etype31 = 0;
+            $xfer += $input->readListBegin($_etype31, $_size28);
+            for ($_i32 = 0; $_i32 < $_size28; ++$_i32)
+            {
+              $elem33 = null;
+              $elem33 = new \PedidoIC();
+              $xfer += $elem33->read($input);
+              $this->items []= $elem33;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::LST) {
+            $this->compuestos = array();
+            $_size34 = 0;
+            $_etype37 = 0;
+            $xfer += $input->readListBegin($_etype37, $_size34);
+            for ($_i38 = 0; $_i38 < $_size34; ++$_i38)
+            {
+              $elem39 = null;
+              $elem39 = new \PedidoIC();
+              $xfer += $elem39->read($input);
+              $this->compuestos []= $elem39;
+            }
+            $xfer += $input->readListEnd();
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado_impresion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 19:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 20:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 21:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Pedido');
+    if ($this->id_pedido !== null) {
+      $xfer += $output->writeFieldBegin('id_pedido', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_pedido);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_reserva !== null) {
+      $xfer += $output->writeFieldBegin('id_reserva', TType::I32, 2);
+      $xfer += $output->writeI32($this->id_reserva);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->mensaje_cocina !== null) {
+      $xfer += $output->writeFieldBegin('mensaje_cocina', TType::STRING, 3);
+      $xfer += $output->writeString($this->mensaje_cocina);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->mensaje_bar !== null) {
+      $xfer += $output->writeFieldBegin('mensaje_bar', TType::STRING, 4);
+      $xfer += $output->writeString($this->mensaje_bar);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 5);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descripcion !== null) {
+      $xfer += $output->writeFieldBegin('descripcion', TType::STRING, 6);
+      $xfer += $output->writeString($this->descripcion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total_pagado !== null) {
+      $xfer += $output->writeFieldBegin('total_pagado', TType::DOUBLE, 7);
+      $xfer += $output->writeDouble($this->total_pagado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cambio !== null) {
+      $xfer += $output->writeFieldBegin('cambio', TType::DOUBLE, 8);
+      $xfer += $output->writeDouble($this->cambio);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->efectivo !== null) {
+      $xfer += $output->writeFieldBegin('efectivo', TType::DOUBLE, 9);
+      $xfer += $output->writeDouble($this->efectivo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tarjeta_credito !== null) {
+      $xfer += $output->writeFieldBegin('tarjeta_credito', TType::DOUBLE, 10);
+      $xfer += $output->writeDouble($this->tarjeta_credito);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->donacion !== null) {
+      $xfer += $output->writeFieldBegin('donacion', TType::DOUBLE, 11);
+      $xfer += $output->writeDouble($this->donacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descuento !== null) {
+      $xfer += $output->writeFieldBegin('descuento', TType::DOUBLE, 12);
+      $xfer += $output->writeDouble($this->descuento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total !== null) {
+      $xfer += $output->writeFieldBegin('total', TType::DOUBLE, 13);
+      $xfer += $output->writeDouble($this->total);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->canjeados !== null) {
+      $xfer += $output->writeFieldBegin('canjeados', TType::DOUBLE, 14);
+      $xfer += $output->writeDouble($this->canjeados);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->items !== null) {
+      if (!is_array($this->items)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('items', TType::LST, 15);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->items));
+        {
+          foreach ($this->items as $iter40)
+          {
+            $xfer += $iter40->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->compuestos !== null) {
+      if (!is_array($this->compuestos)) {
+        throw new TProtocolException('Bad type in structure.', TProtocolException::INVALID_DATA);
+      }
+      $xfer += $output->writeFieldBegin('compuestos', TType::LST, 16);
+      {
+        $output->writeListBegin(TType::STRUCT, count($this->compuestos));
+        {
+          foreach ($this->compuestos as $iter41)
+          {
+            $xfer += $iter41->write($output);
+          }
+        }
+        $output->writeListEnd();
+      }
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado_impresion !== null) {
+      $xfer += $output->writeFieldBegin('estado_impresion', TType::STRING, 17);
+      $xfer += $output->writeString($this->estado_impresion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 18);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 19);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 20);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 21);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class PedidoIC {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'id_enlace',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    3 => array(
+      'var' => 'id_precuenta_general',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    4 => array(
+      'var' => 'id_reserva_enlace',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    5 => array(
+      'var' => 'cantidad',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    6 => array(
+      'var' => 'cantidad_seleccionada',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    7 => array(
+      'var' => 'cantidad_total',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    8 => array(
+      'var' => 'precio_unitario',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    9 => array(
+      'var' => 'descuento',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    10 => array(
+      'var' => 'total',
+      'isRequired' => false,
+      'type' => TType::DOUBLE,
+      ),
+    11 => array(
+      'var' => 'nombre',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    12 => array(
+      'var' => 'descripcion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    13 => array(
+      'var' => 'tipo',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    14 => array(
+      'var' => 'estado',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    15 => array(
+      'var' => 'fecha_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    16 => array(
+      'var' => 'usuario_creacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    17 => array(
+      'var' => 'fecha_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    18 => array(
+      'var' => 'usuario_modificacion',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id = null;
+  /**
+   * @var int
+   */
+  public $id_enlace = null;
+  /**
+   * @var int
+   */
+  public $id_precuenta_general = null;
+  /**
+   * @var int
+   */
+  public $id_reserva_enlace = null;
+  /**
+   * @var int
+   */
+  public $cantidad = null;
+  /**
+   * @var int
+   */
+  public $cantidad_seleccionada = null;
+  /**
+   * @var int
+   */
+  public $cantidad_total = null;
+  /**
+   * @var double
+   */
+  public $precio_unitario = null;
+  /**
+   * @var double
+   */
+  public $descuento = null;
+  /**
+   * @var double
+   */
+  public $total = null;
+  /**
+   * @var string
+   */
+  public $nombre = null;
+  /**
+   * @var string
+   */
+  public $descripcion = null;
+  /**
+   * @var string
+   */
+  public $tipo = null;
+  /**
+   * @var string
+   */
+  public $estado = null;
+  /**
+   * @var string
+   */
+  public $fecha_creacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_creacion = null;
+  /**
+   * @var string
+   */
+  public $fecha_modificacion = null;
+  /**
+   * @var string
+   */
+  public $usuario_modificacion = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id'])) {
+        $this->id = $vals['id'];
+      }
+      if (isset($vals['id_enlace'])) {
+        $this->id_enlace = $vals['id_enlace'];
+      }
+      if (isset($vals['id_precuenta_general'])) {
+        $this->id_precuenta_general = $vals['id_precuenta_general'];
+      }
+      if (isset($vals['id_reserva_enlace'])) {
+        $this->id_reserva_enlace = $vals['id_reserva_enlace'];
+      }
+      if (isset($vals['cantidad'])) {
+        $this->cantidad = $vals['cantidad'];
+      }
+      if (isset($vals['cantidad_seleccionada'])) {
+        $this->cantidad_seleccionada = $vals['cantidad_seleccionada'];
+      }
+      if (isset($vals['cantidad_total'])) {
+        $this->cantidad_total = $vals['cantidad_total'];
+      }
+      if (isset($vals['precio_unitario'])) {
+        $this->precio_unitario = $vals['precio_unitario'];
+      }
+      if (isset($vals['descuento'])) {
+        $this->descuento = $vals['descuento'];
+      }
+      if (isset($vals['total'])) {
+        $this->total = $vals['total'];
+      }
+      if (isset($vals['nombre'])) {
+        $this->nombre = $vals['nombre'];
+      }
+      if (isset($vals['descripcion'])) {
+        $this->descripcion = $vals['descripcion'];
+      }
+      if (isset($vals['tipo'])) {
+        $this->tipo = $vals['tipo'];
+      }
+      if (isset($vals['estado'])) {
+        $this->estado = $vals['estado'];
+      }
+      if (isset($vals['fecha_creacion'])) {
+        $this->fecha_creacion = $vals['fecha_creacion'];
+      }
+      if (isset($vals['usuario_creacion'])) {
+        $this->usuario_creacion = $vals['usuario_creacion'];
+      }
+      if (isset($vals['fecha_modificacion'])) {
+        $this->fecha_modificacion = $vals['fecha_modificacion'];
+      }
+      if (isset($vals['usuario_modificacion'])) {
+        $this->usuario_modificacion = $vals['usuario_modificacion'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'PedidoIC';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_enlace);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_precuenta_general);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_reserva_enlace);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->cantidad);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->cantidad_seleccionada);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->cantidad_total);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->precio_unitario);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 9:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->descuento);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 10:
+          if ($ftype == TType::DOUBLE) {
+            $xfer += $input->readDouble($this->total);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 11:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nombre);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 12:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->descripcion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 13:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->tipo);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 14:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->estado);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 15:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 16:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_creacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 17:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->fecha_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 18:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->usuario_modificacion);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('PedidoIC');
+    if ($this->id !== null) {
+      $xfer += $output->writeFieldBegin('id', TType::I32, 1);
+      $xfer += $output->writeI32($this->id);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_enlace !== null) {
+      $xfer += $output->writeFieldBegin('id_enlace', TType::I32, 2);
+      $xfer += $output->writeI32($this->id_enlace);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_precuenta_general !== null) {
+      $xfer += $output->writeFieldBegin('id_precuenta_general', TType::I32, 3);
+      $xfer += $output->writeI32($this->id_precuenta_general);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->id_reserva_enlace !== null) {
+      $xfer += $output->writeFieldBegin('id_reserva_enlace', TType::I32, 4);
+      $xfer += $output->writeI32($this->id_reserva_enlace);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cantidad !== null) {
+      $xfer += $output->writeFieldBegin('cantidad', TType::I32, 5);
+      $xfer += $output->writeI32($this->cantidad);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cantidad_seleccionada !== null) {
+      $xfer += $output->writeFieldBegin('cantidad_seleccionada', TType::I32, 6);
+      $xfer += $output->writeI32($this->cantidad_seleccionada);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->cantidad_total !== null) {
+      $xfer += $output->writeFieldBegin('cantidad_total', TType::I32, 7);
+      $xfer += $output->writeI32($this->cantidad_total);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->precio_unitario !== null) {
+      $xfer += $output->writeFieldBegin('precio_unitario', TType::DOUBLE, 8);
+      $xfer += $output->writeDouble($this->precio_unitario);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descuento !== null) {
+      $xfer += $output->writeFieldBegin('descuento', TType::DOUBLE, 9);
+      $xfer += $output->writeDouble($this->descuento);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->total !== null) {
+      $xfer += $output->writeFieldBegin('total', TType::DOUBLE, 10);
+      $xfer += $output->writeDouble($this->total);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nombre !== null) {
+      $xfer += $output->writeFieldBegin('nombre', TType::STRING, 11);
+      $xfer += $output->writeString($this->nombre);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->descripcion !== null) {
+      $xfer += $output->writeFieldBegin('descripcion', TType::STRING, 12);
+      $xfer += $output->writeString($this->descripcion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->tipo !== null) {
+      $xfer += $output->writeFieldBegin('tipo', TType::STRING, 13);
+      $xfer += $output->writeString($this->tipo);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->estado !== null) {
+      $xfer += $output->writeFieldBegin('estado', TType::STRING, 14);
+      $xfer += $output->writeString($this->estado);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_creacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_creacion', TType::STRING, 15);
+      $xfer += $output->writeString($this->fecha_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_creacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_creacion', TType::STRING, 16);
+      $xfer += $output->writeString($this->usuario_creacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->fecha_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('fecha_modificacion', TType::STRING, 17);
+      $xfer += $output->writeString($this->fecha_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->usuario_modificacion !== null) {
+      $xfer += $output->writeFieldBegin('usuario_modificacion', TType::STRING, 18);
+      $xfer += $output->writeString($this->usuario_modificacion);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
 class Busqueda {
   static $isValidate = false;
 
@@ -3676,15 +7727,15 @@ class Busqueda {
         case 6:
           if ($ftype == TType::LST) {
             $this->filtros = array();
-            $_size14 = 0;
-            $_etype17 = 0;
-            $xfer += $input->readListBegin($_etype17, $_size14);
-            for ($_i18 = 0; $_i18 < $_size14; ++$_i18)
+            $_size42 = 0;
+            $_etype45 = 0;
+            $xfer += $input->readListBegin($_etype45, $_size42);
+            for ($_i46 = 0; $_i46 < $_size42; ++$_i46)
             {
-              $elem19 = null;
-              $elem19 = new \Filtros();
-              $xfer += $elem19->read($input);
-              $this->filtros []= $elem19;
+              $elem47 = null;
+              $elem47 = new \Filtros();
+              $xfer += $elem47->read($input);
+              $this->filtros []= $elem47;
             }
             $xfer += $input->readListEnd();
           } else {
@@ -3751,9 +7802,9 @@ class Busqueda {
       {
         $output->writeListBegin(TType::STRUCT, count($this->filtros));
         {
-          foreach ($this->filtros as $iter20)
+          foreach ($this->filtros as $iter48)
           {
-            $xfer += $iter20->write($output);
+            $xfer += $iter48->write($output);
           }
         }
         $output->writeListEnd();
@@ -3768,6 +7819,249 @@ class Busqueda {
     if ($this->fecha_termino !== null) {
       $xfer += $output->writeFieldBegin('fecha_termino', TType::STRING, 8);
       $xfer += $output->writeString($this->fecha_termino);
+      $xfer += $output->writeFieldEnd();
+    }
+    $xfer += $output->writeFieldStop();
+    $xfer += $output->writeStructEnd();
+    return $xfer;
+  }
+
+}
+
+class Caja {
+  static $isValidate = false;
+
+  static $_TSPEC = array(
+    1 => array(
+      'var' => 'id_caja',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    2 => array(
+      'var' => 'nombre',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    3 => array(
+      'var' => 'origen',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    4 => array(
+      'var' => 'serie_sucursal',
+      'isRequired' => false,
+      'type' => TType::STRING,
+      ),
+    5 => array(
+      'var' => 'serie_caja',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    6 => array(
+      'var' => 'secuencia',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    7 => array(
+      'var' => 'secuencia_nota',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    8 => array(
+      'var' => 'iva',
+      'isRequired' => false,
+      'type' => TType::I32,
+      ),
+    );
+
+  /**
+   * @var int
+   */
+  public $id_caja = null;
+  /**
+   * @var string
+   */
+  public $nombre = null;
+  /**
+   * @var string
+   */
+  public $origen = null;
+  /**
+   * @var string
+   */
+  public $serie_sucursal = null;
+  /**
+   * @var int
+   */
+  public $serie_caja = null;
+  /**
+   * @var int
+   */
+  public $secuencia = null;
+  /**
+   * @var int
+   */
+  public $secuencia_nota = null;
+  /**
+   * @var int
+   */
+  public $iva = null;
+
+  public function __construct($vals=null) {
+    if (is_array($vals)) {
+      if (isset($vals['id_caja'])) {
+        $this->id_caja = $vals['id_caja'];
+      }
+      if (isset($vals['nombre'])) {
+        $this->nombre = $vals['nombre'];
+      }
+      if (isset($vals['origen'])) {
+        $this->origen = $vals['origen'];
+      }
+      if (isset($vals['serie_sucursal'])) {
+        $this->serie_sucursal = $vals['serie_sucursal'];
+      }
+      if (isset($vals['serie_caja'])) {
+        $this->serie_caja = $vals['serie_caja'];
+      }
+      if (isset($vals['secuencia'])) {
+        $this->secuencia = $vals['secuencia'];
+      }
+      if (isset($vals['secuencia_nota'])) {
+        $this->secuencia_nota = $vals['secuencia_nota'];
+      }
+      if (isset($vals['iva'])) {
+        $this->iva = $vals['iva'];
+      }
+    }
+  }
+
+  public function getName() {
+    return 'Caja';
+  }
+
+  public function read($input)
+  {
+    $xfer = 0;
+    $fname = null;
+    $ftype = 0;
+    $fid = 0;
+    $xfer += $input->readStructBegin($fname);
+    while (true)
+    {
+      $xfer += $input->readFieldBegin($fname, $ftype, $fid);
+      if ($ftype == TType::STOP) {
+        break;
+      }
+      switch ($fid)
+      {
+        case 1:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->id_caja);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 2:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->nombre);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 3:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->origen);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 4:
+          if ($ftype == TType::STRING) {
+            $xfer += $input->readString($this->serie_sucursal);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 5:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->serie_caja);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 6:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->secuencia);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 7:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->secuencia_nota);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        case 8:
+          if ($ftype == TType::I32) {
+            $xfer += $input->readI32($this->iva);
+          } else {
+            $xfer += $input->skip($ftype);
+          }
+          break;
+        default:
+          $xfer += $input->skip($ftype);
+          break;
+      }
+      $xfer += $input->readFieldEnd();
+    }
+    $xfer += $input->readStructEnd();
+    return $xfer;
+  }
+
+  public function write($output) {
+    $xfer = 0;
+    $xfer += $output->writeStructBegin('Caja');
+    if ($this->id_caja !== null) {
+      $xfer += $output->writeFieldBegin('id_caja', TType::I32, 1);
+      $xfer += $output->writeI32($this->id_caja);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->nombre !== null) {
+      $xfer += $output->writeFieldBegin('nombre', TType::STRING, 2);
+      $xfer += $output->writeString($this->nombre);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->origen !== null) {
+      $xfer += $output->writeFieldBegin('origen', TType::STRING, 3);
+      $xfer += $output->writeString($this->origen);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->serie_sucursal !== null) {
+      $xfer += $output->writeFieldBegin('serie_sucursal', TType::STRING, 4);
+      $xfer += $output->writeString($this->serie_sucursal);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->serie_caja !== null) {
+      $xfer += $output->writeFieldBegin('serie_caja', TType::I32, 5);
+      $xfer += $output->writeI32($this->serie_caja);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->secuencia !== null) {
+      $xfer += $output->writeFieldBegin('secuencia', TType::I32, 6);
+      $xfer += $output->writeI32($this->secuencia);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->secuencia_nota !== null) {
+      $xfer += $output->writeFieldBegin('secuencia_nota', TType::I32, 7);
+      $xfer += $output->writeI32($this->secuencia_nota);
+      $xfer += $output->writeFieldEnd();
+    }
+    if ($this->iva !== null) {
+      $xfer += $output->writeFieldBegin('iva', TType::I32, 8);
+      $xfer += $output->writeI32($this->iva);
       $xfer += $output->writeFieldEnd();
     }
     $xfer += $output->writeFieldStop();

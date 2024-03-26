@@ -70,6 +70,7 @@ if ($band) {
                  });
                 $(".crear_usuario").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); 
+                $('#MCafe').modal('hide'); 
                 var table = $('#table-editable').DataTable();
                 table.ajax.reload();
             </script>
@@ -114,6 +115,7 @@ if ($band) {
                  });
                 $(".crear_usuarioC").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); 
+                $('#MCafe').modal('hide'); 
                 var table = $('#table-editable').DataTable();
                 table.ajax.reload();
             </script>
@@ -158,6 +160,7 @@ if ($band) {
                  });
                 $(".crear_usuarioE").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); 
+                $('#MCafe').modal('hide'); 
                 var table = $('#table-editable').DataTable();
                 table.ajax.reload();
             </script>
@@ -203,6 +206,7 @@ if ($band) {
                  });
                 $(".crear_facturacion").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); 
+                $('#MCafe').modal('hide'); 
                 var table = $('#table-editable1').DataTable();
                 table.ajax.reload();
             </script>
@@ -299,6 +303,7 @@ if ($band) {
                     });
                     $(".editar_usuario").prop("disabled",false);
                     $('#Cusuarios').modal('hide'); 
+                    $('#MCafe').modal('hide'); 
                     var table = $('#table-editable').DataTable();
                     table.ajax.reload();
                 </script>
@@ -344,6 +349,7 @@ if ($band) {
                     });
                 $(".editar_usuarioE").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); 
+                $('#MCafe').modal('hide'); 
                 var table = $('#table-editable').DataTable();
                 table.ajax.reload();
             </script>
@@ -389,6 +395,7 @@ if ($band) {
                     });
                 $(".editar_usuarioC").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); 
+                $('#MCafe').modal('hide'); 
                 var table = $('#table-editable').DataTable();
                 table.ajax.reload();
             </script>
@@ -434,6 +441,7 @@ if ($band) {
                  });
                 $(".editar_facturacion").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); 
+                $('#MCafe').modal('hide'); 
                 var table = $('#table-editable1').DataTable();
                 table.ajax.reload();
             </script>

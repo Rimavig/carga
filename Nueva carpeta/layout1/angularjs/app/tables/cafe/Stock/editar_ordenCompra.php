@@ -12,6 +12,7 @@ if (isset($_POST["var1"])) {
     $promocionG = $client10->getOrdenCompra($busquedaT, $ordenCompraT);
     if ($promocionG->estado === "A") {
         $bloquear = "disabled";
+        $crear = "";
     }
 }
 

@@ -459,6 +459,7 @@ if($tipo=="insertCompra"){
                 $('#totalCaja').load('./tables/facturacion/total.php',function() {   
                     $('.page-spinner-loader').addClass('hide');
                     $('#Cusuarios').modal('hide'); // abrir
+                    $('#MCafe').modal('hide'); // abrir
                     var n = noty({
                     text        : '<div class="alert alert-success "><p><strong>Se ingreso con éxito</p></div>',
                     layout      : 'topCenter', //or left, right, bottom-right...
@@ -485,6 +486,7 @@ if($tipo=="insertCompra"){
                 $('#totalCaja').load('./tables/facturacion/total.php',function() {
                     $('.page-spinner-loader').addClass('hide');    
                     $('#Cusuarios').modal('hide'); // abrir
+                    $('#MCafe').modal('hide'); // abrir
                     var n = noty({
                     text        : '<div class="alert alert-success "><p><strong>Se ingreso promoción con éxito</p></div>',
                     layout      : 'topCenter', //or left, right, bottom-right...
@@ -579,6 +581,7 @@ if($tipo=="insertCompra"){
                             timeout: 3000,
                             });
                             $('#Cusuarios').modal('hide'); 
+                            $('#MCafe').modal('hide'); // abrir
                     });
                 
 
@@ -604,6 +607,7 @@ if($tipo=="insertCompra"){
                             timeout: 3000,
                     });
                     $('#Cusuarios').modal('hide'); 
+                    $('#MCafe').modal('hide'); // abrir
                 </script>
                   <?php
             }
@@ -632,7 +636,8 @@ if($tipo=="insertCompra"){
                     },
                     timeout: 3000,
                     });
-                    $('#Cusuarios').modal('hide'); 
+                    $('#Cusuarios').modal('hide');
+                    $('#MCafe').modal('hide'); // abrir 
                 });
                
             </script>
@@ -921,6 +926,7 @@ if($tipo=="insertCompra"){
                 $(".notaCredito").prop("disabled",false);
                 $(".updateNotaCredito").prop("disabled",false);
                 $('#Cusuarios').modal('hide'); // abrir
+                $('#MCafe').modal('hide'); // abrir
             </script>
             <?php
         }else if ( $tipo=="deleteCompra"){

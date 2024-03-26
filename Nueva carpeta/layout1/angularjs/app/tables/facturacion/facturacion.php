@@ -1,7 +1,7 @@
 <?php
-include ("../../conect_taquilla.php");
-include ("../../autenticacion.php");
-$var1="";
+include("../../conect_taquilla.php");
+include("../../autenticacion.php");
+$var1 = "";
 if (isset($_POST["var1"])) {
     $var1 = $_POST['var1'];
 }
@@ -15,11 +15,11 @@ if (isset($_POST["var1"])) {
         <div class="panel-content pagination2 table-responsive">
             <div class="m-b-20">
                 <div class="btn-group">
-                    <button class="crearF btn btn-sm btn-dark"  href="javascript:;"><i class="fa fa-plus"></i> Facturación</button>
+                    <button class="crearF btn btn-sm btn-dark" href="javascript:;"><i class="fa fa-plus"></i> Facturación</button>
                 </div>
             </div>
-            <input type="text" id="idUsuario1" class="esconder"  value="<?php echo $var1; ?>" disabled>
-            <table class="table " data-table-name="Datos de Factura"  id="table-editable1" style="table-layout: fixed;">
+            <input type="text" id="idUsuario1" class="esconder" value="<?php echo $var1; ?>" disabled>
+            <table class="table " data-table-name="Datos de Factura" id="table-editable1" style="table-layout: fixed;">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -28,15 +28,15 @@ if (isset($_POST["var1"])) {
                         <th>Identificación</th>
                         <th>Correo</th>
                         <th>Direccion</th>
-                        <th>Estado</th>    
+                        <th>Estado</th>
                         <th class="text-right">Editar</th>
                     </tr>
                 </thead>
             </table>
             <div class="modal-footer text-center">
-                <button type="button"  class="btn btn-embossed btn-default atras ">Atras</button>
-                <button type="button"  class="btn btn-embossed btn-danger salir ">Cancelar</button>
-            </div> 
+                <button type="button" class="btn btn-embossed btn-default atras ">Atras</button>
+                <button type="button" class="btn btn-embossed btn-danger salir ">Cancelar</button>
+            </div>
         </div>
     </div>
 </div>

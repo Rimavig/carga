@@ -40,6 +40,7 @@ if (isset($_GET["id"])) {
     $promocionG = $client10->getOrdenCompra($busquedaT, $ordenCompraT);
     if ($promocionG->estado === "A") {
         $text = "hide";
+        $crear = "hide";
     }
 }
     ?>
